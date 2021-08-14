@@ -2,22 +2,21 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import SEO from '../helpers/seo'
 import { rhythm, scale } from '../utils/typography'
 
-class BlogPostTemplate extends React.Component {
+class ServiceTemplate extends React.Component {
   render() {
-    const post = this.props.data.mdx
+    const service = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     console.log(this.props.pageContext)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
+        <SEO title={service.frontmatter.title} description={service.excerpt} />
+        <h1>{service.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -26,15 +25,14 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {service.frontmatter.date}
         </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXRenderer>{service.body}</MDXRenderer>
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
 
         <ul
           style={{
@@ -65,7 +63,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default ServiceTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Bon Vivant Serif';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../utils/fonts/BonVivantSerif.woff2') format("woff2"),
+    url('../utils/fonts/BonVivantSerif.woff') format("woff")
+}
+@font-face {
+    font-family: 'Bon Vivant Serif';
+    font-weight: 600;
+    font-style: bold;
+    src: url('../utils/fonts/BonVivantSerif-Bold.woff2') format("woff2"),
+    url('../utils/fonts/BonVivantSerif-Bold.woff') format("woff")
+}
