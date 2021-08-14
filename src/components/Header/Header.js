@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import './style.scss'
+import Logo from './Logo'
+import Button from './Button'
+import Drawer from './Drawer'
+import * as styles from './style.module.scss'
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-            test
-        </div>
+      <div className={`container flex flex-row justify-end mx-auto px-4 md:px-8 py-3 md:py-8 ${styles.header}`}>
+        <Logo />
+        <Button open={open} setOpen={setOpen} />
+        <Drawer open={open} />
+      </div>
     )
 }
 
