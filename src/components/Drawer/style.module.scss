@@ -1,0 +1,14 @@
+@import 'src/styles/colors.scss';
+
+.drawer {
+    top: -100vh;
+
+    .inner {
+        height: 90vh;
+    }
+}
+.open {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+}

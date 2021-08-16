@@ -1,10 +1,13 @@
 import React from 'react'
+import Image from 'gatsby-image'
 
-const Hero = () => {
+import * as styles from './style.module.scss'
+
+const Hero = props => {
     return (
-        <div>
-            
-        </div>
+      <div className="absolute -top-52 left-0 right-0">
+        <Image fluid={props.background} className={styles.background} />
+      </div>
     )
 }
 

@@ -11,6 +11,10 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+    colors: {
+      ...colors,
+      dark: '#131214',
+    },
   },
   variants: {
     extend: {},
