@@ -1,27 +1,17 @@
 export default [
   {
-    path: "/design",
-    text: "Design",
+    path: "/services",
+    name: "Services",
     id: 1
   },
   {
-    path: "/websites",
-    text: "Websites",
+    path: "/about",
+    name: "About",
     id: 2
   },
   {
-    path: "/wordpress",
-    text: "WordPress",
+    path: "/contact",
+    name: "Contact",
     id: 3
-  },
-  {
-    path: "/bigcommerce",
-    text: "BigCommerce",
-    id: 4
-  },
-  {
-    path: "/shopify",
-    text: "Shopify",
-    id: 5
   },
 ]

@@ -16,3 +16,10 @@
     src: url('../utils/fonts/BonVivantSerif-Bold.woff2') format("woff2"),
     url('../utils/fonts/BonVivantSerif-Bold.woff') format("woff")
 }
+
+.serif {
+    font-family: 'Bon Vivant Serif', serif;
+}
+.sans-serif {
+    font-family: 'Source Sans Pro', sans-serif;
+}

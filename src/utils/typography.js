@@ -8,7 +8,7 @@ const typography = new Typography({
     'Georgia',
     'serif',
   ],
-  bodyFontFamily: ['Source Sans Pro', 'serif'],
+  bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
 })
 
 // Hot reload typography in development.

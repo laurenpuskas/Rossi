@@ -1,9 +1,12 @@
-.header {
-    width: 100%;
-}
+.button {
+    &:hover {
+        cursor: pointer;
+    }
 
-.drawer {
-    width: auto;
-    background: black;
-    opacity: 0;
+    span {
+        width: 100%;
+        height: 2px;
+        margin: 0.08rem 0;
+        background-color: black;
+    }
 }
