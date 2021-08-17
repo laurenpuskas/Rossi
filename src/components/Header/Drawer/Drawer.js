@@ -1,8 +1,9 @@
 import React from 'react'
 import { bool } from 'prop-types'
 
-import Wrapper from '../Wrapper'
+import Wrapper from '../../Wrapper'
 import Menu from '../Menu'
+import Form from '../../UI/Form'
 import * as styles from './style.module.scss'
 
 const Drawer = (props) => {
@@ -31,8 +32,14 @@ const Drawer = (props) => {
         z-40 
       `}
       >
-        <Wrapper size="large">
-          <Menu />
+        <Wrapper size="large" classes="grid grid-cols-2 gap-4 py-10 h-full">
+          <Menu
+            classes="grid"
+            liClasses="py-2"
+            linkClasses="text-4xl font-thin"
+            open={props.open}
+          />
+          <Form classes="hidden md:flex flex-col flex-wrap justify-center" />
         </Wrapper>
       </div>
     </div>

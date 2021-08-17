@@ -4,20 +4,25 @@ import Headroom from 'react-headroom'
 
 import Wrapper from '../Wrapper'
 import Logo from '../Logo'
-import Button from '../Button'
-import Drawer from '../Drawer'
+import Button from '../UI/Button'
+import Drawer from './Drawer'
 import * as styles from './style.module.scss'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
 
+  const openHandler = () => {
+    setOpen(!open)
+    document.body.classList.toggle('drawer-open')
+  }
+  
   return (
     <>
       <Headroom className={`z-50 relative`}>
-        <Wrapper size="large">
+        <Wrapper size="large" classes="py-3 md:py-8">
           <div
             className={`relative w-5 h-5 mr-4 flex flex-col justify-center ${styles.button}`}
-            onClick={() => setOpen(!open)}
+            onClick={openHandler}
           >
             <span
               className={`absolute top-2 left-0 transition transform duration-100 ${
