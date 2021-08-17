@@ -1,9 +1,4 @@
-.white {
-    background-color: white;
-}
-.black {
-    background-color: black;
-}
+@import 'src/styles/colors';
 
 .medium {
     padding: 0.6rem 1.5rem;
@@ -12,4 +7,9 @@
 }
 .large {
     padding: 0.8rem;
+}
+
+.open {
+    background-color: $dark;
+    color: white;
 }

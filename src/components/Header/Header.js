@@ -2,49 +2,49 @@ import React, { useState } from 'react'
 import { bool, func } from 'prop-types'
 import Headroom from 'react-headroom'
 
+import Wrapper from '../Wrapper'
 import Logo from '../Logo'
-import Button from '../Button'
-import Drawer from '../Drawer'
+import Button from '../UI/Button'
+import Drawer from './Drawer'
 import * as styles from './style.module.scss'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
 
+  const openHandler = () => {
+    setOpen(!open)
+    document.body.classList.toggle('drawer-open')
+  }
+  
   return (
     <>
       <Headroom className={`z-50 relative`}>
-        <div
-          className={`container flex flex-row items-center mx-auto px-4 md:px-14 py-3 md:py-8 w-full`}
-        >
+        <Wrapper size="large" classes="py-3 md:py-8">
           <div
-            className={`
-              relative 
-              w-5 
-              h-5 
-              mr-4 
-              flex 
-              flex-col 
-              justify-center 
-              ${styles.button}
-            `}
-            onClick={() => setOpen(!open)}
+            className={`relative w-5 h-5 mr-4 flex flex-col justify-center ${styles.button}`}
+            onClick={openHandler}
           >
             <span
-              className={`absolute top-2 left-0 ${
+              className={`absolute top-2 left-0 transition transform duration-100 ${
                 open ? 'transform rotate-45' : ''
               }`}
             ></span>
             <span
-              className={`absolute left-0 ${
+              className={`absolute left-0 transition transform duration-100 ${
                 open ? 'transform -rotate-45 top-2' : 'top-3'
               }`}
             ></span>
           </div>
           <Logo />
-          <Button url="/get-started" transition="fade" classes="ml-auto">
+          <Button
+            url="/get-started"
+            open={open}
+            transition="fade"
+            classes="ml-auto"
+          >
             Get Started
           </Button>
-        </div>
+        </Wrapper>
       </Headroom>
 
       <Drawer open={open} />

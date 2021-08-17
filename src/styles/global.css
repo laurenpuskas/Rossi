@@ -23,3 +23,8 @@
 .sans-serif {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+.drawer-open {
+    height: 100vh;
+    overflow-y: hidden;
+}
