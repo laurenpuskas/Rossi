@@ -37,7 +37,6 @@ const Header = () => {
           </div>
           <Logo />
           <Button
-            type="submit"
             href="/get-started"
             open={open}
             transition="fade"
