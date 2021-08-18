@@ -1,11 +1,9 @@
 .links {
-    li,
-    a {
+    li {
         width: 100%;
         display: block;
-    }
-    li {
-        transition: opacity ease-in-out 0.3s;
+        transition: opacity ease-in 1s;
+        margin-bottom: 0;
     }
     &:hover {
         li {
