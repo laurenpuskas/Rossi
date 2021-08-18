@@ -1,7 +1,11 @@
 @import 'src/styles/colors.scss';
 
 .drawer {
-    top: -100vh;
+    top: -200vh;
+
+    @media screen and (max-width: 768px) {
+        top: -100vh;
+    }
 
     .inner {
         min-height: 90vh;

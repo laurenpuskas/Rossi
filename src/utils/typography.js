@@ -3,12 +3,13 @@ import Typography from 'typography'
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
-  headerFontFamily: [
-    'Bon Vivant Serif',
-    'Georgia',
-    'serif',
-  ],
+  headerFontFamily: ['Bon Vivant Serif', 'Georgia', 'serif'],
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
+  overrideStyles: ({}, options, styles) => ({
+    body: {
+      color: '#1f1e1c',
+    },
+  }),
 })
 
 // Hot reload typography in development.

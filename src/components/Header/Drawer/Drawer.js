@@ -3,9 +3,7 @@ import { bool } from 'prop-types'
 
 import Wrapper from '../../Wrapper'
 import Menu from '../Menu'
-import Form from '../../UI/Form'
-import Input from '../../UI/Form/Input'
-import Button from '../../UI/Button'
+import Contact from '../../Contact'
 import * as styles from './style.module.scss'
 
 const Drawer = (props) => {
@@ -13,11 +11,12 @@ const Drawer = (props) => {
     <div
       className={`
         ${styles.drawer}
-        ${props.open ? styles.open : ''}
-        fixed 
+        ${props.open ? styles.open : null}
+        absolute
+        md:fixed 
         inset-x-0 
         w-screen 
-        h-full 
+        md:h-full 
         z-40 
         transition-top 
         ease-in-out  
@@ -29,27 +28,16 @@ const Drawer = (props) => {
         ${styles.inner} 
         bg-white
         w-full 
-        h-full
         md:h-5/6
         z-40 
       `}
       >
-        <Wrapper size="large" classes="grid grid-cols-2 gap-4 py-10 h-full">
-          <Menu
-            classes="grid"
-            liClasses="py-2"
-            linkClasses="text-4xl font-thin"
-            open={props.open}
-          />
-          <Form
-            name="contact"
-            classes="hidden md:flex flex-col flex-wrap justify-center"
-          >
-            <Input type="text" name="name" label="Your Name" classes="" />
-            <Input type="email" name="email" label="Email Address" classes="" />
-            <Input type="textarea" name="message" label="Your Message" classes="" />
-            <Button type="submit" label="Send Message" classes="" />
-          </Form>
+        <Wrapper
+          size="large"
+          classes="grid grid-cols-1 md:grid-cols-3 text-center md:text-left md:gap-8 pt-20 pb-2 h-full"
+        >
+          <Menu classes="grid" open={props.open} />
+          <Contact classes="col-span-2 pt-16 md:pt-0" open={props.open} />
         </Wrapper>
       </div>
     </div>

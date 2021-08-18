@@ -3,16 +3,24 @@ import React from 'react'
 const Input = (props) => {
   const type =
     props.type === 'text' || 'email' ? (
-      <input type={props.type} name={props.name} />
+      <input
+        type={props.type}
+        name={props.name}
+        className={`border-b border-dark p-1 mb-5`}
+      />
     ) : (
       <textarea name={props.name} />
     )
 
   return (
-    <div className={props.classes}>
-      {props.label && <label htmlFor={props.name}>{props.label}</label>}
+    <>
       {type}
-    </div>
+      {props.label && (
+        <label htmlFor={props.name}>
+          {props.label}
+        </label>
+      )}
+    </>
   )
 }
 

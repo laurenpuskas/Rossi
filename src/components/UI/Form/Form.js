@@ -5,9 +5,11 @@ const Form = (props) => {
       <form
         name={props.name}
         method="POST"
-        className={props.classes}
+        className={`${props.classes} w-full`}
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value={props.name} />
         {props.children}
       </form>
     )
