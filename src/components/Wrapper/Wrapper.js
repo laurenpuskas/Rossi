@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Wrapper = props => {
+const Wrapper = (props) => {
   return (
     <div
       className={
         props.size == 'large'
-          ? ` container flex flex-row items-center mx-auto px-4 md:px-14 w-full ` +
+          ? 'flex flex-row items-center mx-auto px-4 md:px-14 w-full ' +
             props.classes
-          : ' ' + props.classes
+          : 'flex flex-row items-center mx-auto px-4 md:px-36 w-full ' +
+            props.classes
       }
     >
       {props.children}
