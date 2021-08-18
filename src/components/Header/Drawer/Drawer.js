@@ -18,9 +18,6 @@ const Drawer = (props) => {
         w-screen 
         md:h-full 
         z-40 
-        transition-top 
-        ease-in-out  
-        duration-1000
       `}
     >
       <div
