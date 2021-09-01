@@ -1,10 +1,8 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-// components is its own object outside of render so that the references to
-// components are stable
 const components = {
-  pre: preProps => {
+  pre: (preProps) => {
     return <pre {...preProps} />
   },
 }

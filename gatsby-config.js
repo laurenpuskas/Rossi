@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Made by Rossi`,
+    title: `Rossi`,
     author: `Rossi`,
     description: `Coming soon.`,
     siteUrl: `https://madebyrossi.com/`,
@@ -116,7 +116,7 @@ module.exports = {
             }
             `,
             output: '/rss.xml',
-            title: 'Gatsby RSS feed',
+            title: 'Rossi RSS feed',
           },
         ],
       },
@@ -127,18 +127,17 @@ module.exports = {
         name: `Rossi`,
         short_name: `Rossi`,
         start_url: `/`,
-        display: `minimal-ui`,
         icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        fonts: [`roboto`],
+        display: 'swap',
       },
     },
     `gatsby-plugin-transition-link`,
