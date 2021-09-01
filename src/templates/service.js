@@ -4,7 +4,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from '../components/Layout'
 import SEO from '../helpers/seo'
-import { rhythm, scale } from '../utils/typography'
 
 class ServiceTemplate extends React.Component {
   render() {
@@ -17,22 +16,8 @@ class ServiceTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={service.frontmatter.title} description={service.excerpt} />
         <h1>{service.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {service.frontmatter.date}
-        </p>
+        <p>{service.frontmatter.date}</p>
         <MDXRenderer>{service.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
 
         <ul
           style={{
@@ -66,7 +51,7 @@ class ServiceTemplate extends React.Component {
 export default ServiceTemplate
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     site {
       siteMetadata {
         title

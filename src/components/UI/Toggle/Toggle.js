@@ -1,11 +1,7 @@
 import React from 'react'
 
 const Toggle = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <div>toggle</div>
 }
 
 export default Toggle
