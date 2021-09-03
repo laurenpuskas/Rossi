@@ -1,7 +1,15 @@
 import React from 'react'
 
-const Wrapper = () => {
-  return <div>wrapper</div>
+import * as style from './style.module.scss'
+
+const Wrapper = (props) => {
+  return (
+    <div
+      className={`${style.wrapper} ${props.className ? props.className : ''}`}
+    >
+      {props.children}
+    </div>
+  )
 }
 
 export default Wrapper

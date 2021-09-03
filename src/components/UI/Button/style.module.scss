@@ -1,15 +1,25 @@
-@import 'src/styles/colors';
+@import 'src/styles/variables';
 
-.medium {
-    padding: 0.6rem 1.5rem;
-    font-size: 15px;
-    font-weight: 500;
-}
-.large {
-    padding: 0.8rem;
+.button {
+  color: $black;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 
-.open {
-    background-color: $dark;
-    color: white;
+.orange {
+  color: $orange;
+}
+
+.white {
+  color: $white;
+}
+
+.line {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.75);
+}
+
+.arrow {
 }

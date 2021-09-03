@@ -1,7 +1,27 @@
 import React from 'react'
 
-const Menu = () => {
-  return <div>menu</div>
+import links from '../../constants/links'
+import * as style from './style.module.scss'
+
+const Menu = (props) => {
+  return (
+    <ul className={style.nav}>
+      {links.map((link, index) => {
+        return (
+          <li key={index}>
+            <a
+              href={link.path}
+              className={
+                props.white ? style.white : props.orange ? style.orange : ''
+              }
+            >
+              {link.name}
+            </a>
+          </li>
+        )
+      })}
+    </ul>
+  )
 }
 
 export default Menu
