@@ -1,12 +1,15 @@
 import React from 'react'
 
 import Header from './Header'
+import * as style from './style.module.scss'
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Header />
-      {children}
+      <div className={style.content}>
+        <Header />
+        {children}
+      </div>
     </>
   )
 }

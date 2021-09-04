@@ -26,3 +26,8 @@ h5,
 h6 {
   font-family: $serif;
 }
+
+.headroom-wrapper {
+  z-index: 999;
+  position: relative;
+}

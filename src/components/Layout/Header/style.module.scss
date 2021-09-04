@@ -8,3 +8,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.button {
+  display: none;
+
+  @media screen and (min-width: $medium) {
+    display: inline-block;
+  }
+}
