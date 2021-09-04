@@ -1,7 +1,13 @@
 import React from 'react'
 
-const Drawer = () => {
-  return <div>drawer</div>
+import * as style from './style.module.scss'
+
+const Drawer = (props) => {
+  return (
+    <div className={`${style.drawer} ${props.open ? style.open : ''}`}>
+      drawerrrrr
+    </div>
+  )
 }
 
 export default Drawer

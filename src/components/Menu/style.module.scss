@@ -3,10 +3,14 @@
 .nav {
   color: $black;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: $medium) {
+    display: flex;
+  }
 
   li {
     padding: 0 20px;
@@ -26,4 +30,56 @@
 
 .white {
   color: $white;
+}
+
+.menu {
+  cursor: pointer;
+  height: 48px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+  user-select: none;
+  width: 48px;
+  outline: none;
+  transform: none;
+  display: inline-block;
+
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
+
+  span {
+    background-color: $white;
+    height: 2px;
+    left: 15px;
+    position: absolute;
+    width: 18px;
+    transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
+    transform: none;
+  }
+
+  span:nth-of-type(1) {
+    top: 17px;
+  }
+
+  span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  span:nth-of-type(3) {
+    top: 29px;
+  }
+}
+
+.open {
+  span:nth-of-type(1) {
+    transform: rotate(-45deg) translate(-4.26px, 4.26px);
+  }
+
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  span:nth-of-type(3) {
+    transform: rotate(45deg) translate(-4.26px, -4.26px);
+  }
 }
