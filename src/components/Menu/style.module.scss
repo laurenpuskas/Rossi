@@ -13,13 +13,37 @@
   }
 
   li {
-    padding: 0 20px;
+    padding: 0 1.3vw;
 
     a {
       scroll-behavior: smooth;
-      font-size: 16px;
+      font-size: 1.05vw;
       text-transform: uppercase;
       font-weight: 300;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 1px;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        transition: transform 0.3s ease;
+      }
+      &:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.6);
+        transform: translateX(-101%);
+      }
+      &:hover {
+        &:before {
+          transform: translateX(0);
+        }
+      }
     }
   }
 }
