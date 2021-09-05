@@ -34,14 +34,13 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        // a workaround to solve mdx-remark plugin compat issue
-        // https://github.com/gatsbyjs/gatsby/issues/15486
         plugins: [`gatsby-remark-images`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              quality: 90,
+              maxWidth: 1600,
             },
           },
           {
@@ -58,6 +57,16 @@ module.exports = {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-image`,
+      options: {
+        defaults: {
+          placeholder: `dominantColor`,
+          quality: 100,
+          backgroundColor: `transparent`,
+        },
       },
     },
     `gatsby-transformer-sharp`,

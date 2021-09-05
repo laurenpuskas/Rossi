@@ -3,7 +3,7 @@
 .button {
   color: $black;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.92vw;
   white-space: nowrap;
   text-transform: uppercase;
 }
@@ -19,7 +19,4 @@
 .line {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.75);
-}
-
-.arrow {
 }
