@@ -1,0 +1,15 @@
+@import 'src/styles/variables.scss';
+
+.breadcrumb {
+  color: $grey;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(97, 94, 90, 0.5);
+
+  span {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+}

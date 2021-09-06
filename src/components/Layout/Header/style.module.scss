@@ -2,15 +2,16 @@
 
 .header {
   width: 100%;
-  min-height: 110px;
+  min-height: 120px;
+  right: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (min-width: $xxlarge) {
-    min-height: 130px;
-  }
+  z-index: 999;
 }
 
 .button {

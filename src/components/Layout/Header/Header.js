@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Headroom from 'react-headroom'
 
 import Wrapper from '../Wrapper'
 import Logo from '../../Logo'
@@ -13,17 +12,15 @@ const Header = () => {
 
   return (
     <>
-      <Headroom>
-        <Wrapper className={style.header}>
-          <Logo orange>Rossi.</Logo>
-          <Menu open={open} setOpen={setOpen} white />
-          <div className={style.button}>
-            <Button to={`/get-started`} white line>
-              Get Started
-            </Button>
-          </div>
-        </Wrapper>
-      </Headroom>
+      <Wrapper className={style.header}>
+        <Logo orange>Rossi.</Logo>
+        <Menu open={open} setOpen={setOpen} white />
+        <div className={style.button}>
+          <Button href={`/get-started`} white line>
+            Get Started
+          </Button>
+        </div>
+      </Wrapper>
 
       <Drawer open={open} setOpen={setOpen} />
     </>

@@ -3,20 +3,16 @@
 .hero {
   width: 100vw;
   min-height: 100vh;
-  max-height: 115vh;
-  overflow-y: hidden;
   background-color: $grey;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute !important;
-  top: 0;
   left: 0;
   z-index: -1;
-  padding-top: 150px;
+  padding-top: 155px;
 
   @media screen and (min-width: $xxlarge) {
-    padding-top: 200px;
+    padding-top: 180px;
   }
 }
 
@@ -24,11 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: calc(100vh - 150px);
-
-  @media screen and (min-width: $xxlarge) {
-    min-height: calc(100vh - 200px);
-  }
+  min-height: calc(100vh - 120px);
 
   section {
     position: relative;
@@ -58,9 +50,10 @@
     font-weight: 300;
     font-size: 0.92vw;
     line-height: 1.5vw;
+    margin-bottom: 40px;
   }
 }
 
-.screen {
+.screen:first-of-type {
   margin-bottom: 40px;
 }

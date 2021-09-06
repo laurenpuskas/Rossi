@@ -4,6 +4,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 import Wrapper from '../Layout/Wrapper'
 import Wheel from './Wheel'
+import Button from '../UI/Button'
 import Screens from './Screens'
 import * as style from './style.module.scss'
 
@@ -44,6 +45,9 @@ const Hero = () => {
               eu quam et urna aliquet consectetur. In ultricies mi eu tellus
               ornare lacinia.
             </p>
+            <Button href={`/get-started`} arrow white>
+              Get Started
+            </Button>
           </div>
         </section>
         <Screens />

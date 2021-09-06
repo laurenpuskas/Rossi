@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../helpers/seo'
 import Hero from '../components/Hero'
+import About from '../components/About'
 
 class PageIndex extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class PageIndex extends React.Component {
           ]}
         />
         <Hero />
+        <About />
         <div style={{ height: '3000px' }}> </div>
       </Layout>
     )
