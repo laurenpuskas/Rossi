@@ -1,0 +1,54 @@
+@import 'src/styles/variables.scss';
+
+.about {
+  padding-top: 110px;
+  padding-bottom: 160px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.image {
+  width: 30vw;
+  margin-right: 8vw;
+}
+
+.text {
+  width: 40vw;
+  margin-right: 12vw;
+
+  @media screen and (min-width: $xxlarge) {
+    width: 30vw;
+    margin-right: 22vw;
+  }
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+
+    span {
+      display: block;
+      padding-left: 7vw;
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  div {
+    width: 48%;
+
+    p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+  }
+}

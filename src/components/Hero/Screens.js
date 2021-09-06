@@ -11,7 +11,7 @@ const Screens = () => {
         className={style.screen}
       />
       <StaticImage
-        src="../../images/hero/screen1.png"
+        src="../../images/hero/screen2.png"
         className={style.screen}
       />
     </section>

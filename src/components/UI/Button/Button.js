@@ -10,7 +10,6 @@ const Button = (props) => {
       <a
         href={props.href}
         className={`
-          ${props.arrow ? style.arrow : ''}
           ${props.line ? style.line : ''}
           ${props.white ? style.white : props.orange ? style.orange : ''}
           ${props.className ? style.className : ''}
@@ -18,6 +17,20 @@ const Button = (props) => {
         `}
       >
         {props.children}
+        {props.arrow && (
+          <div className={style.arrow}>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 93.6 10.35"
+            >
+              <path
+                style={{ fill: 'none', stroke: '#fff' }}
+                d="M88.42,10l4.82-4.82 M93.25,5.18l-4.82-4.82 M93.25,5.18H0"
+              />
+            </svg>
+          </div>
+        )}
       </a>
     )
   }
