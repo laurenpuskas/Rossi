@@ -42,9 +42,11 @@
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.1",
     "react-moment": "^1.1.1",
+    "react-slick": "^0.28.1",
     "react-typography": "^0.16.13",
     "react-use": "^17.3.1",
     "sass": "^1.38.2",
+    "slick-carousel": "^1.8.1",
     "typeface-merriweather": "^1.1.13",
     "typeface-montserrat": "^1.1.13",
     "typography-theme-wordpress-2016": "^0.16.19"

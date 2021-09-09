@@ -1,0 +1,28 @@
+@import 'src/styles/variables.scss';
+
+.services {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.dark {
+  * {
+    color: $white;
+  }
+
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  .image,
+  .text {
+    width: 48%;
+  }
+}

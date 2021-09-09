@@ -8,7 +8,7 @@ import Button from '../UI/Button'
 import Screens from './Screens'
 import * as style from './style.module.scss'
 
-const Hero = () => {
+const Hero = (props) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -39,14 +39,10 @@ const Hero = () => {
             }}
           />
           <div className={style.text}>
-            <h1>We build unforgettable websites for brands {`&`} creatives.</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              eu quam et urna aliquet consectetur. In ultricies mi eu tellus
-              ornare lacinia.
-            </p>
-            <Button href={`/get-started`} arrow white>
-              Get Started
+            <h1>{props.title}</h1>
+            <p>{props.subtitle}</p>
+            <Button href={props.buttonURL} arrow white>
+              {props.buttonText}
             </Button>
           </div>
         </section>

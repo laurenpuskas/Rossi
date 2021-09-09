@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -35,7 +35,8 @@ exports.createPages = ({ graphql, actions }) => {
     const services = result.data.allMdx.edges
 
     services.forEach((service, index) => {
-      const previous = index === services.length - 1 ? null : services[index + 1].node
+      const previous =
+        index === services.length - 1 ? null : services[index + 1].node
       const next = index === 0 ? null : services[index - 1].node
 
       createPage({
