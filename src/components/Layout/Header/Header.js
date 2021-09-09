@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Headroom from 'react-headroom'
 
 import Wrapper from '../Wrapper'
 import Logo from '../../Logo'
@@ -11,8 +12,8 @@ const Header = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <>
-      <Wrapper className={style.header}>
+    <Headroom>
+      <Wrapper className={`${style.header} header-wrap`}>
         <Logo orange>Rossi.</Logo>
         <Menu open={open} setOpen={setOpen} white />
         <div className={style.button}>
@@ -23,7 +24,7 @@ const Header = () => {
       </Wrapper>
 
       <Drawer open={open} setOpen={setOpen} />
-    </>
+    </Headroom>
   )
 }
 

@@ -16,7 +16,6 @@ class ServiceTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={service.frontmatter.title} description={service.excerpt} />
         <h1>{service.frontmatter.title}</h1>
-        <p>{service.frontmatter.date}</p>
         <MDXRenderer>{service.body}</MDXRenderer>
 
         <ul
@@ -63,7 +62,6 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
       }
       body
     }

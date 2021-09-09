@@ -45,3 +45,16 @@ h5 {
 h6 {
   font-size: 0.67em;
 }
+
+.headroom-wrapper {
+  z-index: 999;
+  position: relative;
+}
+.headroom--pinned {
+  right: -5px !important;
+
+  .header-wrap {
+    background-color: $black;
+    height: 80px;
+  }
+}
