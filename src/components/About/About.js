@@ -33,7 +33,7 @@ const About = () => {
 
   return (
     <BackgroundImage Tag="div" fluid={background}>
-      <Wrapper className={style.about}>
+      <Wrapper className={style.about} maxWidth={`1600px`}>
         <Breadcrumb id={`1`}>About</Breadcrumb>
 
         <div className={style.wrapper}>

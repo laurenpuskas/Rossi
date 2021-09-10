@@ -25,7 +25,14 @@ const Button = (props) => {
               viewBox="0 0 93.6 10.35"
             >
               <path
-                style={{ fill: 'none', stroke: '#fff' }}
+                style={{ fill: 'none' }}
+                className={
+                  props.white
+                    ? style.fillWhite
+                    : props.orange
+                    ? style.fillOrange
+                    : ''
+                }
                 d="M88.42,10l4.82-4.82 M93.25,5.18l-4.82-4.82 M93.25,5.18H0"
               />
             </svg>

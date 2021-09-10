@@ -6,6 +6,11 @@ const Wrapper = (props) => {
   return (
     <div
       className={`${style.wrapper} ${props.className ? props.className : ''}`}
+      style={{
+        maxWidth: props.maxWidth,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      }}
     >
       {props.children}
     </div>

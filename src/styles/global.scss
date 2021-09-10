@@ -28,10 +28,13 @@ h6 {
   font-family: $serif;
 }
 h1 {
-  font-size: 2em;
+  font-size: 5.7vw;
+  line-height: 5.3vw;
+  margin-bottom: 30px;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 4rem;
+  margin-bottom: 30px;
 }
 h3 {
   font-size: 1.17em;
@@ -44,6 +47,13 @@ h5 {
 }
 h6 {
   font-size: 0.67em;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 .headroom-wrapper {

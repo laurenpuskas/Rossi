@@ -3,11 +3,16 @@
 .services {
   padding-top: 80px;
   padding-bottom: 160px;
+
+  p:last-of-type {
+    margin-bottom: 40px;
+  }
 }
 
 .dark {
   * {
     color: $white;
+    border-color: rgba(255, 255, 255, 0.6);
   }
 
   .wrapper {
@@ -21,8 +26,12 @@
   justify-content: space-between;
   align-items: center;
 
-  .image,
   .text {
-    width: 48%;
+    width: 44%;
+  }
+
+  .image {
+    width: 47%;
+    margin-top: 30px;
   }
 }

@@ -2,7 +2,6 @@
 
 .hero {
   width: 100vw;
-  min-height: 100vh;
   background-color: $grey;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,14 +19,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: calc(100vh - 120px);
 
   section {
     position: relative;
     width: 47%;
   }
   section:nth-of-type(1) {
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 0.4px solid rgba(255, 255, 255, 0.6);
     padding-top: 50px;
   }
 }
@@ -38,12 +36,6 @@
   h1,
   p {
     color: $white;
-  }
-
-  h1 {
-    margin-bottom: 30px;
-    font-size: 5.7vw;
-    line-height: 5.3vw;
   }
 
   p {
