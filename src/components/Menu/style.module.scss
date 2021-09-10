@@ -17,13 +17,17 @@
 
     a {
       scroll-behavior: smooth;
-      font-size: 1.05vw;
+      font-size: 16px;
       text-transform: uppercase;
       font-weight: 300;
       position: relative;
       display: inline-block;
       padding-bottom: 1px;
       overflow: hidden;
+
+      @media screen and (min-width: $xlarge) {
+        font-size: 1.05vw;
+      }
 
       &:before,
       &:after {
@@ -74,15 +78,15 @@
   span {
     background-color: $white;
     height: 2px;
-    left: 15px;
+    right: 0;
     position: absolute;
-    width: 18px;
+    width: 25px;
     transition: all 0.4s cubic-bezier(0, 0, 0, 1) 0s;
     transform: none;
   }
 
   span:nth-of-type(1) {
-    top: 17px;
+    top: 15px;
   }
 
   span:nth-of-type(2) {
@@ -90,13 +94,13 @@
   }
 
   span:nth-of-type(3) {
-    top: 29px;
+    top: 31px;
   }
 }
 
 .open {
   span:nth-of-type(1) {
-    transform: rotate(-45deg) translate(-4.26px, 4.26px);
+    transform: rotate(-45deg) translate(-5.5px, 5.5px);
   }
 
   span:nth-of-type(2) {
@@ -104,6 +108,6 @@
   }
 
   span:nth-of-type(3) {
-    transform: rotate(45deg) translate(-4.26px, -4.26px);
+    transform: rotate(45deg) translate(-5.5px, -5.5px);
   }
 }

@@ -1,8 +1,10 @@
 import React from 'react'
 
+import * as style from './style.module.scss'
+
 const Wheel = (props) => {
   return (
-    <div style={props.style}>
+    <div className={style.wheel} style={props.style}>
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
