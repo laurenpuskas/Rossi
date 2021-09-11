@@ -2,8 +2,12 @@
 
 .logo {
   color: $black;
-  font-size: 2.1vw;
+  font-size: 32px;
   font-family: $serif;
+
+  @media screen and (min-width: $xlarge) {
+    font-size: 2.1vw;
+  }
 }
 
 .orange {

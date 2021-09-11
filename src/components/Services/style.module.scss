@@ -1,28 +1,60 @@
 @import 'src/styles/variables.scss';
 
 .services {
-  padding-top: 80px;
-  padding-bottom: 160px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  @media screen and (min-width: $medium) {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+
+  p:last-of-type {
+    margin-bottom: 40px;
+  }
 }
 
 .dark {
   * {
     color: $white;
+    border-color: rgba(255, 255, 255, 0.6);
   }
 
   .wrapper {
-    flex-direction: row;
+    flex-direction: column;
+
+    @media screen and (min-width: $medium) {
+      flex-direction: row;
+    }
   }
 }
 
 .wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  .image,
+  @media screen and (min-width: $medium) {
+    flex-direction: row-reverse;
+  }
+
   .text {
-    width: 48%;
+    width: 100%;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $medium) {
+      width: 44%;
+      padding-bottom: 0;
+    }
+  }
+
+  .image {
+    width: 100%;
+    margin-top: 30px;
+
+    @media screen and (min-width: $medium) {
+      width: 47%;
+    }
   }
 }

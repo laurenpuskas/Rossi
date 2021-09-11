@@ -1,0 +1,58 @@
+@import 'src/styles/variables.scss';
+.slider,
+.sliderReverse {
+  display: flex;
+}
+.sliderReverse {
+  flex-direction: row-reverse;
+}
+
+.dots,
+.dotsReverse {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    button {
+      border: 1px solid $white;
+      background-color: transparent;
+      width: 8px;
+      height: 8px;
+      margin: 0;
+      padding: 0;
+      border-radius: 8px;
+      text-indent: -9999px;
+    }
+  }
+}
+.dots {
+  margin-left: 30px;
+
+  li {
+    button {
+      border: 1px solid $black;
+    }
+
+    &[class~='slick-active'] {
+      button {
+        background-color: $black;
+      }
+    }
+  }
+}
+.dotsReverse {
+  margin-right: 30px;
+
+  li {
+    &[class~='slick-active'] {
+      button {
+        background-color: $white;
+      }
+    }
+  }
+}

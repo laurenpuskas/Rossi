@@ -48,6 +48,7 @@ const Services = (props) => {
     >
       <Wrapper
         className={`${style.services} ${isEven(props.id) ? '' : style.dark}`}
+        maxWidth={`1600px`}
       >
         <Breadcrumb id={`2`}>Services</Breadcrumb>
         <Item
@@ -55,6 +56,7 @@ const Services = (props) => {
           body={props.body}
           image1={props.image1}
           image2={props.image2}
+          isEven={isEven(props.id)}
         />
       </Wrapper>
     </BackgroundImage>

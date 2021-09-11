@@ -3,9 +3,19 @@
 .button {
   color: $black;
   font-weight: 600;
-  font-size: 0.92vw;
+  font-size: 14px;
   white-space: nowrap;
   text-transform: uppercase;
+
+  @media screen and (min-width: $xlarge) {
+    font-size: 0.92vw;
+  }
+
+  &:hover {
+    .arrow {
+      margin-left: 30px;
+    }
+  }
 }
 
 .orange {
@@ -26,4 +36,17 @@
   display: inline-block;
   margin-left: 18px;
   margin-top: -10px;
+  transition: all 0.3s ease;
+
+  path {
+    stroke: $black;
+  }
+}
+
+.fillOrange {
+  stroke: $orange !important;
+}
+
+.fillWhite {
+  stroke: $white !important;
 }

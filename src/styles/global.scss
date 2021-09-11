@@ -28,10 +28,36 @@ h6 {
   font-family: $serif;
 }
 h1 {
-  font-size: 2em;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    font-size: 44px;
+    line-height: 36px;
+  }
+
+  @media screen and (min-width: $large) and (max-width: $xlarge) {
+    font-size: 58px;
+    line-height: 50px;
+  }
+
+  @media screen and (min-width: $xlarge) {
+    font-size: 5.7vw;
+    line-height: 5.3vw;
+  }
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $medium) {
+    font-size: 64px;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 4rem;
+  }
 }
 h3 {
   font-size: 1.17em;
@@ -44,6 +70,13 @@ h5 {
 }
 h6 {
   font-size: 0.67em;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 .headroom-wrapper {

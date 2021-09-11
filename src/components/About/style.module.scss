@@ -1,37 +1,61 @@
 @import 'src/styles/variables.scss';
 
 .about {
-  padding-top: 110px;
-  padding-bottom: 160px;
+  padding-top: 90px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $medium) {
+    padding-top: 110px;
+    padding-bottom: 160px;
+  }
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  flex-direction: column;
+
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
+  }
 }
 
 .image {
-  width: 30vw;
-  margin-right: 8vw;
+  width: 68%;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: $medium) {
+    align-self: flex-end;
+    min-height: 400px;
+  }
+
+  @media screen and (min-width: $medium) {
+    width: 36%;
+    margin-right: 8%;
+    margin-bottom: 0;
+  }
 }
 
 .text {
-  width: 40vw;
-  margin-right: 12vw;
+  width: 100%;
+  margin-right: 0;
 
-  @media screen and (min-width: $xxlarge) {
-    width: 30vw;
-    margin-right: 22vw;
+  @media screen and (min-width: $medium) {
+    width: 56%;
+  }
+
+  @media screen and (min-width: $xlarge) {
+    width: 44%;
+    margin-right: 12%;
   }
 
   h2 {
-    font-size: 4rem;
     margin-bottom: 40px;
 
     span {
       display: block;
-      padding-left: 7vw;
+      padding-left: 7%;
     }
   }
 }
@@ -40,15 +64,25 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 30px;
+  flex-direction: column;
+
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
+  }
 
   div {
-    width: 48%;
+    width: 100%;
+
+    @media screen and (min-width: $medium) {
+      width: 48%;
+    }
 
     p {
-      font-size: 0.875rem;
-      line-height: 1.6;
-      font-weight: 300;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $medium) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
