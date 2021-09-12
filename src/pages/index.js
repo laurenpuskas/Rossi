@@ -6,6 +6,7 @@ import SEO from '../helpers/seo'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
+import FAQ from '../components/FAQ'
 
 class PageIndex extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class PageIndex extends React.Component {
             />
           )
         })}
+        <FAQ />
       </Layout>
     )
   }

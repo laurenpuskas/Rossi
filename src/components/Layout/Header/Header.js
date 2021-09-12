@@ -12,8 +12,12 @@ const Header = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <Headroom>
-      <Wrapper className={`${style.header} header-wrap`}>
+    <Headroom className={open ? style.fixed : ''}>
+      <Wrapper
+        className={`${style.header} ${
+          open ? style.headerFixed : ''
+        } header-wrap`}
+      >
         <Logo orange>Rossi.</Logo>
         <Menu open={open} setOpen={setOpen} white />
         <div className={style.button}>

@@ -32,7 +32,7 @@ const About = () => {
   const image = data.image.childImageSharp.fluid
 
   return (
-    <BackgroundImage Tag="div" fluid={background}>
+    <BackgroundImage Tag="div" fluid={background} className={style.background}>
       <Wrapper className={style.about} maxWidth={`1600px`}>
         <Breadcrumb id={`1`}>About</Breadcrumb>
 

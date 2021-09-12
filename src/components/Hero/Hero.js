@@ -12,9 +12,16 @@ const Hero = (props) => {
   const data = useStaticQuery(
     graphql`
       query {
-        noise: file(relativePath: { eq: "hero/background.jpg" }) {
+        desktopBG: file(relativePath: { eq: "hero/background.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 2880) {
+            fluid(quality: 100, maxWidth: 2880) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mobileBG: file(relativePath: { eq: "hero/background-mobile.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 750) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -23,10 +30,16 @@ const Hero = (props) => {
     `
   )
 
-  const background = data.noise.childImageSharp.fluid
+  const sources = [
+    data.mobileBG.childImageSharp.fluid,
+    {
+      ...data.desktopBG.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
   return (
-    <BackgroundImage Tag="div" fluid={background} className={style.hero}>
+    <BackgroundImage Tag="div" fluid={sources} className={style.hero}>
       <Wrapper className={style.wrapper}>
         <section>
           <Wheel
