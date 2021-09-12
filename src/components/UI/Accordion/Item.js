@@ -2,23 +2,18 @@ import React from 'react'
 
 import * as style from './style.module.scss'
 
-const Item = ({ label, isCollapsed, handleClick, children }) => {
+const Accordion = (props) => {
   return (
-    <>
-      <button className={style.button} onClick={handleClick}>
-        {label}
-      </button>
-      <div
-        className={`
-          ${style.item} 
-          ${isCollapsed ? style.collapsed : style.expanded}
-        `}
-        aria-expanded={isCollapsed}
-      >
-        <p>{children}</p>
+    <div className={style.tab}>
+      <input type={`checkbox`} id={props.id} />
+      <label className={style.tabLabel} for={props.id}>
+        {props.label}
+      </label>
+      <div className={style.tabContent}>
+        <p>{props.children}</p>
       </div>
-    </>
+    </div>
   )
 }
 
-export default Item
+export default Accordion

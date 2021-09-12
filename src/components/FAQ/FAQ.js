@@ -62,10 +62,10 @@ const FAQ = () => {
           </div>
 
           <div className={style.accordion}>
-            <Accordion defaultIndex={`1`}>
+            <Accordion>
               {faqs.map((faq) => {
                 return (
-                  <Item label={faq.question} index={faq.id}>
+                  <Item label={faq.question} id={faq.id}>
                     {faq.answer}
                   </Item>
                 )

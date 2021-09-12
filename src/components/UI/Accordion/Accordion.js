@@ -1,28 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import Item from './Item'
+import * as style from './style.module.scss'
 
-const Accordion = ({ defaultIndex, onItemClick, children }) => {
-  const [bindIndex, setBindIndex] = useState(defaultIndex)
-
-  const changeItem = (itemIndex) => {
-    if (typeof onItemClick === 'function') onItemClick(itemIndex)
-    if (itemIndex !== bindIndex) setBindIndex(itemIndex)
-  }
-  const items = children.filter((item) => item.type.name === 'Item')
-
-  return (
-    <>
-      {items.map(({ props }) => (
-        <Item
-          isCollapsed={bindIndex !== props.index}
-          label={props.label}
-          handleClick={() => changeItem(props.index)}
-          children={props.children}
-        />
-      ))}
-    </>
-  )
+const Accordion = (props) => {
+  return <div className={style.tabs}>{props.children}</div>
 }
 
 export default Accordion
