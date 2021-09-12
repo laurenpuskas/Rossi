@@ -16,7 +16,7 @@ const Services = (props) => {
           relativePath: { eq: "services/background-dark.jpg" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 2880) {
+            fluid(quality: 100, maxWidth: 2880) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -25,7 +25,7 @@ const Services = (props) => {
           relativePath: { eq: "services/background-light.jpg" }
         ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 2880) {
+            fluid(quality: 100, maxWidth: 2880) {
               ...GatsbyImageSharpFluid
             }
           }

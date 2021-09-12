@@ -1,0 +1,58 @@
+@import 'src/styles/variables.scss';
+
+.faq {
+  position: relative;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  background-color: $grey;
+
+  @media screen and (min-width: $medium) {
+    padding-top: 110px;
+    padding-bottom: 160px;
+  }
+
+  * {
+    color: $white;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.title {
+  margin: 60px 0 50px;
+
+  span {
+    display: block;
+    padding-left: 7%;
+  }
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
+  }
+
+  .text {
+    width: 100%;
+
+    @media screen and (min-width: $medium) {
+      width: 35%;
+    }
+
+    h5 {
+      margin-top: 30px;
+    }
+  }
+
+  .accordion {
+    width: 100%;
+
+    @media screen and (min-width: $medium) {
+      width: 55%;
+    }
+  }
+}

@@ -18,6 +18,17 @@
   }
 }
 
+.fixed {
+  [class~='headroom'] {
+    position: fixed !important;
+    transform: none !important;
+  }
+}
+
+.headerFixed {
+  position: fixed;
+}
+
 .button {
   display: none;
 
