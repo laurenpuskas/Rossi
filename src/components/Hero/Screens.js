@@ -1,19 +1,31 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 import * as style from './style.module.scss'
 
 const Screens = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        screen: file(relativePath: { eq: "hero/screen.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1270) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const screen = data.screen.childImageSharp.fluid
+
   return (
-    <section>
-      <StaticImage
-        src="../../images/hero/screen1.png"
-        className={style.screen}
-      />
-      <StaticImage
-        src="../../images/hero/screen2.png"
-        className={style.screen}
-      />
+    <section className={style.screens}>
+      <div className={style.inner}>
+        <Img fluid={screen} className={style.screen} />
+      </div>
     </section>
   )
 }
