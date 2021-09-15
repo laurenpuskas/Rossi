@@ -31,7 +31,7 @@ const Screens = () => {
 
       <div className={style.screens}>
         <div className={style.inner}>
-          <Img fluid={screen} className={style.screen} />
+          <Img fluid={screen} className={style.screens} />
           <div className={style.cta}>
             <button className={style.button}>Shop the Collection</button>
           </div>
