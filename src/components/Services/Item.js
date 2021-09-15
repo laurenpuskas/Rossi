@@ -10,7 +10,7 @@ const Item = (props) => {
   return (
     <article className={style.wrapper}>
       <div className={style.text}>
-        <h2 className={style.title}>{props.title}</h2>
+        <h2>{props.title}</h2>
         <MDXRenderer>{props.body}</MDXRenderer>
         <Button href={`/get-started`} white={props.isEven ? '' : 'white'} arrow>
           Get Started

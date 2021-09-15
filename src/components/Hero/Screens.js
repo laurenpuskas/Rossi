@@ -10,7 +10,7 @@ const Screens = () => {
       query {
         screen: file(relativePath: { eq: "hero/screen.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1270) {
+            fluid(quality: 100, maxWidth: 2500) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -22,9 +22,20 @@ const Screens = () => {
   const screen = data.screen.childImageSharp.fluid
 
   return (
-    <section className={style.screens}>
-      <div className={style.inner}>
-        <Img fluid={screen} className={style.screen} />
+    <section className={style.device}>
+      <div className={style.dots}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className={style.screens}>
+        <div className={style.inner}>
+          <Img fluid={screen} className={style.screens} />
+          <div className={style.cta}>
+            <button className={style.button}>Shop the Collection</button>
+          </div>
+        </div>
       </div>
     </section>
   )

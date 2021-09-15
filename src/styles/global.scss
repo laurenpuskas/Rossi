@@ -92,5 +92,10 @@ p {
   .header-wrap {
     background-color: $black;
     height: 80px;
+
+    ul a {
+      font-size: 0.89vw;
+      letter-spacing: 0.09vw;
+    }
   }
 }

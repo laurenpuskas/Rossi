@@ -12,9 +12,7 @@ const Footer = (props) => {
       <div className={style.footer}>
         <Wrapper width={`1600px`}>
           <div className={style.grid}>
-            <div className={style.logo}>
-              <Logo orange>Rossi.</Logo>
-            </div>
+            <Logo orange>Rossi.</Logo>
 
             <ul className={style.nav}>
               {links.map((link, index) => {
@@ -37,11 +35,9 @@ const Footer = (props) => {
               })}
             </ul>
 
-            <div className={style.button}>
-              <Button href={`/get-started`} white line>
-                Get Started
-              </Button>
-            </div>
+            <Button href={`/get-started`} white line>
+              Get Started
+            </Button>
           </div>
         </Wrapper>
       </div>

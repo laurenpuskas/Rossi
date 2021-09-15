@@ -12,7 +12,6 @@ const Button = (props) => {
         className={`
           ${props.line ? style.line : ''}
           ${props.white ? style.white : props.orange ? style.orange : ''}
-          ${props.className ? style.className : ''}
           ${style.button} 
           button
         `}
