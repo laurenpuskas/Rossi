@@ -7,6 +7,7 @@ import Breadcrumb from '../UI/Breadcrumb'
 import Accordion from '../UI/Accordion'
 import Item from '../UI/Accordion/Item'
 import Button from '../UI/Button'
+import Footer from '../Layout/Footer'
 import faqs from '../../constants/faq'
 import * as style from './style.module.scss'
 
@@ -14,9 +15,18 @@ const FAQ = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        background: file(relativePath: { eq: "common/background-footer.jpg" }) {
+        desktopBG: file(relativePath: { eq: "common/background-footer.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 2880) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        mobileBG: file(
+          relativePath: { eq: "common/background-footer-mobile.jpg" }
+        ) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 750) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -25,10 +35,16 @@ const FAQ = () => {
     `
   )
 
-  const background = data.background.childImageSharp.fluid
+  const sources = [
+    data.mobileBG.childImageSharp.fluid,
+    {
+      ...data.desktopBG.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
 
   return (
-    <BackgroundImage Tag="div" fluid={background} className={style.faq}>
+    <BackgroundImage Tag="div" fluid={sources} className={style.faq}>
       <Wrapper maxWidth={`1600px`}>
         <Breadcrumb id={`3`} white>
           FAQ
@@ -74,6 +90,8 @@ const FAQ = () => {
           </div>
         </div>
       </Wrapper>
+
+      <Footer />
     </BackgroundImage>
   )
 }

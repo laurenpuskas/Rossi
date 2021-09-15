@@ -1,5 +1,4 @@
 import React from 'react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 

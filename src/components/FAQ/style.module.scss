@@ -4,12 +4,10 @@
   position: relative;
   width: 100%;
   padding-top: 90px;
-  padding-bottom: 40px;
   background-color: $grey;
 
   @media screen and (min-width: $medium) {
     padding-top: 110px;
-    padding-bottom: 160px;
   }
 
   * {
@@ -31,9 +29,11 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-bottom: 115px;
 
   @media screen and (min-width: $medium) {
     flex-direction: row;
+    padding-bottom: 70px;
   }
 
   .text {
