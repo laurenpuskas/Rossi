@@ -53,8 +53,7 @@ const Services = (props) => {
         <Item
           title={props.title}
           body={props.body}
-          image1={props.image1}
-          image2={props.image2}
+          image={props.image}
           isEven={isEven(props.id)}
         />
       </Wrapper>
