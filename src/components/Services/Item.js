@@ -18,8 +18,8 @@ const Item = (props) => {
       </div>
       <div className={style.image}>
         <Carousel isEven={props.isEven}>
-          <Img fluid={props.image1} />
-          <Img fluid={props.image2} />
+          <Img fluid={props.image} />
+          <Img fluid={props.image} />
         </Carousel>
       </div>
     </article>
