@@ -150,5 +150,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'portal',
+        id: 'portal',
+      },
+    },
+    `gatsby-plugin-smoothscroll`,
   ],
 }

@@ -42,6 +42,7 @@ const Services = (props) => {
 
   return (
     <BackgroundImage
+      id="Services"
       Tag="div"
       fluid={isEven(props.id) ? backgroundLight : backgroundDark}
     >

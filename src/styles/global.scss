@@ -19,6 +19,10 @@ body {
   line-height: 1;
 }
 
+a {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -60,7 +64,7 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.17em;
+  font-size: 40px;
 }
 h4 {
   font-size: 1em;

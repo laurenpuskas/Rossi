@@ -24,6 +24,7 @@
       display: inline-block;
       padding-bottom: 1px;
       overflow: hidden;
+      cursor: pointer;
 
       @media screen and (min-width: $xlarge) {
         font-size: 1.05vw;
