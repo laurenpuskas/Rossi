@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
 import Wrapper from '../Layout/Wrapper'
 import Wheel from './Wheel'
 import Button from '../UI/Button'
+import Contact from '../Contact'
 import Screens from './Screens'
 import * as style from './style.module.scss'
 
 const Hero = (props) => {
+  const [openModal, setOpenModal] = useState(false)
+
+  const toggleModal = () => {
+    setOpenModal(!openModal)
+  }
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -39,29 +46,38 @@ const Hero = (props) => {
   ]
 
   return (
-    <BackgroundImage Tag="div" fluid={sources} className={style.hero}>
-      <Wrapper className={style.wrapper}>
-        <section>
-          <Wheel
-            color={`#CE7B36`}
-            style={{
-              position: 'absolute',
-              top: '-3.3vw',
-              right: '6.5vw',
-              width: '9.8vw',
-            }}
-          />
-          <div className={style.text}>
-            <h1>{props.title}</h1>
-            <p>{props.subtitle}</p>
-            <Button href={props.buttonURL} arrow white>
-              {props.buttonText}
-            </Button>
-          </div>
-        </section>
-        <Screens />
-      </Wrapper>
-    </BackgroundImage>
+    <>
+      <BackgroundImage
+        id="Home"
+        Tag="div"
+        fluid={sources}
+        className={style.hero}
+      >
+        <Wrapper className={style.wrapper}>
+          <section>
+            <Wheel
+              color={`#CE7B36`}
+              style={{
+                position: 'absolute',
+                top: '-3.3vw',
+                right: '6.5vw',
+                width: '9.8vw',
+              }}
+            />
+            <div className={style.text}>
+              <h1>{props.title}</h1>
+              <p>{props.subtitle}</p>
+              <Button onClick={toggleModal} arrow white>
+                {props.buttonText}
+              </Button>
+            </div>
+          </section>
+          <Screens />
+        </Wrapper>
+      </BackgroundImage>
+
+      {openModal && <Contact onClick={toggleModal} />}
+    </>
   )
 }
 

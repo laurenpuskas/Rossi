@@ -1,4 +1,5 @@
 import React from 'react'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import links from '../../constants/links'
 import * as style from './style.module.scss'
@@ -11,7 +12,7 @@ const Menu = (props) => {
           return (
             <li key={index}>
               <a
-                href={link.path}
+                onClick={() => scrollTo(link.path)}
                 className={
                   props.white ? style.white : props.orange ? style.orange : ''
                 }

@@ -1,27 +1,25 @@
 import React from 'react'
 
+import * as style from './style.module.scss'
+
 const Input = (props) => {
   const type =
-    props.type === 'text' || 'email' ? (
+    props.type === 'textarea' ? (
+      <textarea
+        name={props.name}
+        className={style.textarea}
+        placeholder={props.placeholder}
+      ></textarea>
+    ) : (
       <input
         type={props.type}
         name={props.name}
-        className={`border-b border-dark p-1 mb-5`}
+        className={style.input}
+        placeholder={props.placeholder}
       />
-    ) : (
-      <textarea name={props.name} />
     )
 
-  return (
-    <>
-      {type}
-      {props.label && (
-        <label htmlFor={props.name}>
-          {props.label}
-        </label>
-      )}
-    </>
-  )
+  return type
 }
 
 export default Input

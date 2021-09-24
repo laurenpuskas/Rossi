@@ -6,6 +6,12 @@
   font-size: 14px;
   white-space: nowrap;
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 
   @media screen and (min-width: $xlarge) {
     font-size: 0.92vw;

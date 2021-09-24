@@ -44,7 +44,7 @@ const FAQ = () => {
   ]
 
   return (
-    <BackgroundImage Tag="div" fluid={sources} className={style.faq}>
+    <BackgroundImage id="FAQ" Tag="div" fluid={sources} className={style.faq}>
       <Wrapper maxWidth={`1600px`}>
         <Breadcrumb id={`3`} white>
           FAQ
