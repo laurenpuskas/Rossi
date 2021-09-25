@@ -42,6 +42,7 @@ const Button = (props) => {
   } else {
     return (
       <a
+        href={props.href}
         onClick={props.onClick}
         className={`
           ${props.line ? style.line : ''}

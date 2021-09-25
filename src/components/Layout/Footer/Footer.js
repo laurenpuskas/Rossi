@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Wrapper from '../Wrapper'
 import Logo from '../../Logo'
 import Button from '../../UI/Button'
+import Contact from '../../Contact'
 import links from '../../../constants/links'
 import * as style from './style.module.scss'
 
 const Footer = (props) => {
+  const [openModal, setOpenModal] = useState(false)
+
+  const toggleModal = () => {
+    setOpenModal(!openModal)
+  }
+
   return (
     <>
       <div className={style.footer}>
@@ -19,7 +27,7 @@ const Footer = (props) => {
                 return (
                   <li key={index}>
                     <a
-                      href={link.path}
+                      onClick={() => scrollTo(link.path)}
                       className={
                         props.white
                           ? style.white
@@ -35,7 +43,7 @@ const Footer = (props) => {
               })}
             </ul>
 
-            <Button href={`/get-started`} white line>
+            <Button onClick={toggleModal} white line>
               Get Started
             </Button>
           </div>
@@ -47,6 +55,8 @@ const Footer = (props) => {
           Copyright {new Date().getFullYear()}, Rossi. All rights reserved.
         </Wrapper>
       </div>
+
+      {openModal && <Contact onClick={toggleModal} />}
     </>
   )
 }
