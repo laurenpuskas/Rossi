@@ -8,6 +8,7 @@ const Form = (props) => {
     <form
       name={props.name}
       method="POST"
+      action={props.action}
       className={`${props.classes ? props.classes : ''} ${style.form}`}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
