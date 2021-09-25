@@ -16,7 +16,7 @@ export default [
   },
   {
     path: '#FAQ',
-    name: 'Contact',
+    name: 'FAQ',
     id: 4,
   },
 ]
