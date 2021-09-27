@@ -37,9 +37,7 @@ const Header = () => {
         <Drawer open={open} setOpen={setOpen} />
       </Headroom>
 
-      {openModal && (
-        <Contact formName={`headercontact`} onClick={toggleModal} />
-      )}
+      {openModal && <Contact onClick={toggleModal} />}
     </>
   )
 }

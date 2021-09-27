@@ -98,7 +98,7 @@ const FAQ = () => {
         <Footer />
       </BackgroundImage>
 
-      {openModal && <Contact formName={`faqcontact`} onClick={toggleModal} />}
+      {openModal && <Contact onClick={toggleModal} />}
     </>
   )
 }

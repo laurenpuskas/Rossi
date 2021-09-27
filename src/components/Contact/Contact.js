@@ -11,7 +11,7 @@ const Contact = (props) => {
       title={`Contact Us`}
       subtitle={`All the lorem ipsum generators on the internet tend to repeat predefined chunks as necessary, making this the first true generator on the internet.`}
     >
-      <Form name={props.formName} send={`Send`}>
+      <Form name={`contact`} send={`Send`}>
         <Input type={`text`} name={`firstname`} placeholder={`First Name`} />
         <Input type={`text`} name={`lastname`} placeholder={`Last Name`} />
         <Input type={`tel`} name={`phone`} placeholder={`Phone`} />
