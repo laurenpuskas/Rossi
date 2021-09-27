@@ -14,7 +14,6 @@ const Input = (props) => {
       <input
         type={props.type}
         name={props.name}
-        id={props.name}
         className={style.input}
         placeholder={props.placeholder}
       />
