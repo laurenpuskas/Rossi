@@ -16,7 +16,7 @@ const Services = (props) => {
         ) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 2880) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -25,7 +25,7 @@ const Services = (props) => {
         ) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 2880) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

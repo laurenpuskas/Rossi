@@ -12,15 +12,15 @@ const About = () => {
       query {
         background: file(relativePath: { eq: "about/background.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 2878) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 100, maxWidth: 2878) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         image: file(relativePath: { eq: "about/image.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 880) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 100, maxWidth: 880) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
