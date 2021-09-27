@@ -76,7 +76,7 @@ const Hero = (props) => {
         </Wrapper>
       </BackgroundImage>
 
-      {openModal && <Contact onClick={toggleModal} />}
+      {/* {openModal && <Contact onClick={toggleModal} />} */}
     </>
   )
 }

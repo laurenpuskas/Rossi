@@ -36,7 +36,7 @@ const Item = (props) => {
         </div>
       </article>
 
-      {openModal && <Contact onClick={toggleModal} />}
+      {/* {openModal && <Contact onClick={toggleModal} />} */}
     </>
   )
 }

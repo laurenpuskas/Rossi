@@ -56,7 +56,7 @@ const Footer = (props) => {
         </Wrapper>
       </div>
 
-      {openModal && <Contact onClick={toggleModal} />}
+      {/* {openModal && <Contact onClick={toggleModal} />} */}
     </>
   )
 }
