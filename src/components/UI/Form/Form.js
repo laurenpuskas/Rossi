@@ -4,10 +4,6 @@ import Button from '../Button'
 import * as style from './style.module.scss'
 
 const Form = (props) => {
-  const formHandler = (event) => {
-    event.preventDefault()
-  }
-
   return (
     <form
       name="contact"
@@ -18,7 +14,7 @@ const Form = (props) => {
     >
       <input type="hidden" name="form-name" value={props.name} />
       {props.children}
-      <Button type={`submit`} onClick={formHandler} orange arrow>
+      <Button type={`submit`} orange arrow>
         {props.send}
       </Button>
     </form>
