@@ -11,14 +11,14 @@ const Screens = () => {
         screen1: file(relativePath: { eq: "hero/screen1.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         screen2: file(relativePath: { eq: "hero/screen2.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -31,7 +31,12 @@ const Screens = () => {
 
   return (
     <section>
-      <Img fluid={screen1} className={style.screen} />
+      <Img
+        fluid={screen1}
+        fadeIn="soft"
+        fadeInDuration="3000"
+        className={style.screen}
+      />
       <Img fluid={screen2} className={style.screen} />
     </section>
   )

@@ -22,7 +22,7 @@ const Drawer = (props) => {
         background: file(relativePath: { eq: "common/background-drawer.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 750) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

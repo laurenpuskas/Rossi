@@ -13,14 +13,14 @@ const Page = (props) => {
         desktopBG: file(relativePath: { eq: "hero/background.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 2880) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         mobileBG: file(relativePath: { eq: "hero/background-mobile.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 750) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

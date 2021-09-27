@@ -25,7 +25,7 @@ const FAQ = () => {
         desktopBG: file(relativePath: { eq: "common/background-footer.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 2880) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -34,7 +34,7 @@ const FAQ = () => {
         ) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 750) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

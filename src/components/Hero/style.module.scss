@@ -55,10 +55,11 @@
 }
 
 .text {
-  width: 72%;
+  width: 68%;
   margin-bottom: 60px;
 
   @media screen and (min-width: $medium) {
+    width: 72%;
     margin-bottom: 30px;
   }
 
