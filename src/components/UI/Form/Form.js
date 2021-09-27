@@ -6,7 +6,7 @@ import * as style from './style.module.scss'
 const Form = (props) => {
   return (
     <form
-      name="contact"
+      name={props.name}
       method="POST"
       className={`${props.classes ? props.classes : ''} ${style.form}`}
       data-netlify="true"

@@ -57,7 +57,7 @@ const Drawer = (props) => {
         </BackgroundImage>
       </div>
 
-      {openModal && <Contact onClick={toggleModal} />}
+      {/* {openModal && <Contact onClick={toggleModal} />} */}
     </>
   )
 }
