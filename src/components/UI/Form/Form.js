@@ -6,18 +6,14 @@ import * as style from './style.module.scss'
 const Form = (props) => {
   return (
     <form
-      name="contactform"
-      method="POST"
-      Content-Type="application/x-www-form-urlencoded"
-      className={`${props.classes ? props.classes : ''} ${style.form}`}
+      name="contact"
+      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contactform" />
-      {props.children}
-      <Button type={`submit`} orange arrow>
-        {props.send}
-      </Button>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="email" name="email" placeholder="Type your email" />
+      <button type="submit">Send</button>
     </form>
   )
 }
