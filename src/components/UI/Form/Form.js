@@ -4,18 +4,21 @@ import Button from '../Button'
 import * as style from './style.module.scss'
 
 const Form = (props) => {
+  const formHandler = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <form
-      name={props.name}
+      name="contact"
       method="POST"
-      action="/success"
       className={`${props.classes ? props.classes : ''} ${style.form}`}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value={props.name} />
       {props.children}
-      <Button type={`submit`} orange arrow>
+      <Button type={`submit`} onClick={formHandler} orange arrow>
         {props.send}
       </Button>
     </form>
