@@ -5,6 +5,11 @@ import Img from 'gatsby-image'
 import Carousel from '../UI/Carousel'
 import Button from '../UI/Button'
 import Contact from '../Contact'
+import {
+  getStarted,
+  servicesFormTitle,
+  servicesFormSubtitle,
+} from '../../constants/text'
 import * as style from './style.module.scss'
 
 const Item = (props) => {
@@ -25,7 +30,7 @@ const Item = (props) => {
             white={props.isEven ? '' : 'white'}
             arrow
           >
-            Get Started
+            {getStarted}
           </Button>
         </div>
         <div className={style.image}>
@@ -36,7 +41,13 @@ const Item = (props) => {
         </div>
       </article>
 
-      {/* {openModal && <Contact onClick={toggleModal} />} */}
+      {openModal && (
+        <Contact
+          title={servicesFormTitle}
+          subtitle={servicesFormSubtitle}
+          onClick={toggleModal}
+        />
+      )}
     </>
   )
 }

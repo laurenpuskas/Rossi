@@ -6,6 +6,12 @@ import Logo from '../../Logo'
 import Button from '../../UI/Button'
 import Contact from '../../Contact'
 import links from '../../../constants/links'
+import {
+  logo,
+  getStarted,
+  CTAFormTitle,
+  CTAFormSubtitle,
+} from '../../../constants/text'
 import * as style from './style.module.scss'
 
 const Footer = (props) => {
@@ -20,7 +26,7 @@ const Footer = (props) => {
       <div className={style.footer}>
         <Wrapper width={`1600px`}>
           <div className={style.grid}>
-            <Logo orange>Rossi.</Logo>
+            <Logo orange>{logo}</Logo>
 
             <ul className={style.nav}>
               {links.map((link, index) => {
@@ -44,7 +50,7 @@ const Footer = (props) => {
             </ul>
 
             <Button onClick={toggleModal} white line>
-              Get Started
+              {getStarted}
             </Button>
           </div>
         </Wrapper>
@@ -56,7 +62,13 @@ const Footer = (props) => {
         </Wrapper>
       </div>
 
-      {/* {openModal && <Contact onClick={toggleModal} />} */}
+      {openModal && (
+        <Contact
+          title={CTAFormTitle}
+          subtitle={CTAFormSubtitle}
+          onClick={toggleModal}
+        />
+      )}
     </>
   )
 }

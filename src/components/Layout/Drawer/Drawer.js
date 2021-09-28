@@ -7,6 +7,11 @@ import Wrapper from '../Wrapper'
 import Button from '../../UI/Button'
 import Contact from '../../Contact'
 import links from '../../../constants/links'
+import {
+  getStarted,
+  CTAFormTitle,
+  CTAFormSubtitle,
+} from '../../../constants/text'
 import * as style from './style.module.scss'
 
 const Drawer = (props) => {
@@ -51,13 +56,19 @@ const Drawer = (props) => {
               })}
             </ul>
             <Button onClick={toggleModal} white line>
-              Get Started
+              {getStarted}
             </Button>
           </Wrapper>
         </BackgroundImage>
       </div>
 
-      {/* {openModal && <Contact onClick={toggleModal} />} */}
+      {openModal && (
+        <Contact
+          title={CTAFormTitle}
+          subtitle={CTAFormSubtitle}
+          onClick={toggleModal}
+        />
+      )}
     </>
   )
 }

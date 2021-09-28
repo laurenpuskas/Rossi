@@ -57,3 +57,28 @@
     }
   }
 }
+
+.contacts {
+  margin: 25px 0 40px;
+
+  li {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  span,
+  a {
+    font-weight: 300;
+  }
+}
+.icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 14px;
+  display: inline;
+
+  path {
+    fill: $orange;
+  }
+}

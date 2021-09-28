@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 import Wrapper from '../Layout/Wrapper'
 import Breadcrumb from '../UI/Breadcrumb'
 import Item from './Item'
+import { servicesLabel } from '../../constants/text'
 import * as style from './style.module.scss'
 
 const Services = (props) => {
@@ -50,7 +51,7 @@ const Services = (props) => {
         className={`${style.services} ${isEven(props.id) ? '' : style.dark}`}
         maxWidth={`1600px`}
       >
-        <Breadcrumb id={`2`}>Services</Breadcrumb>
+        <Breadcrumb id={`2`}>{servicesLabel}</Breadcrumb>
         <Item
           title={props.title}
           body={props.body}

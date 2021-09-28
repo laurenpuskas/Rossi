@@ -16,6 +16,7 @@ const Input = (props) => {
         name={props.name}
         className={style.input}
         placeholder={props.placeholder}
+        required={props.required}
       />
     )
 

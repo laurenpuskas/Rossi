@@ -2,25 +2,25 @@ export default [
   {
     question: 'What content management systems do you work with?',
     answer:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.',
+      'We have worked with a wide range of content management systems. The most popular systems include Shopify, Squarespace, WordPress, BigCommerce, and Contentful. We also offer tailored solutions for projects that require custom admin panels and frontend features.',
     id: 1,
-  },
-  {
-    question: 'How long will it take to build a website?',
-    answer:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.',
-    id: 2,
   },
   {
     question: 'Are your services a good fit for me?',
     answer:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.',
-    id: 3,
+      'Everyone has unique needs for their online presence. Feel free to reach out today for a free consultation to discuss whether Rossi is a good fit for your brand. Call (602) 930-7428 or email info@madebyrossi.com',
+    id: 2,
   },
   {
     question: 'Do you offer search engine optimization?',
     answer:
-      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.',
+      'Yes, every website we launch includes basic SEO features like sitemaps, SSL certificates, clean HTML markup, structured data, and mobile optimization.',
+    id: 3,
+  },
+  {
+    question: 'Do you offer product support after launch?',
+    answer:
+      'Yes! We create detailed video documentation after the launch of every project. We also offer priority support for all clients.',
     id: 4,
   },
 ]

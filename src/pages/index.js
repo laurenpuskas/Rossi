@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
 import FAQ from '../components/FAQ'
+import { getStarted, heroTitle, heroSubtitle } from '../constants/text'
 
 class PageIndex extends React.Component {
   render() {
@@ -17,7 +18,7 @@ class PageIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Home"
+          title={`Home`}
           keywords={[
             `websites`,
             `branding`,
@@ -27,12 +28,9 @@ class PageIndex extends React.Component {
           ]}
         />
         <Hero
-          title={`We build unforgettable websites for brands & creatives.`}
-          subtitle={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              eu quam et urna aliquet consectetur. In ultricies mi eu tellus
-              ornare lacinia.`}
-          buttonText={`Get Started`}
-          buttonURL={`/get-started`}
+          title={heroTitle}
+          subtitle={heroSubtitle}
+          buttonText={getStarted}
         />
         <About />
         {services.map((service) => {

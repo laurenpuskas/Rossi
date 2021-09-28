@@ -7,6 +7,7 @@ import Wheel from './Wheel'
 import Button from '../UI/Button'
 import Contact from '../Contact'
 import Screens from './Screens'
+import { CTAFormTitle, CTAFormSubtitle } from '../../constants/text'
 import * as style from './style.module.scss'
 
 const Hero = (props) => {
@@ -76,7 +77,13 @@ const Hero = (props) => {
         </Wrapper>
       </BackgroundImage>
 
-      {/* {openModal && <Contact onClick={toggleModal} />} */}
+      {openModal && (
+        <Contact
+          title={CTAFormTitle}
+          subtitle={CTAFormSubtitle}
+          onClick={toggleModal}
+        />
+      )}
     </>
   )
 }

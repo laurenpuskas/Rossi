@@ -7,6 +7,12 @@ import Menu from '../../Menu'
 import Button from '../../UI/Button'
 import Contact from '../../Contact'
 import Drawer from '../Drawer'
+import {
+  logo,
+  getStarted,
+  CTAFormTitle,
+  CTAFormSubtitle,
+} from '../../../constants/text'
 import * as style from './style.module.scss'
 
 const Header = () => {
@@ -26,18 +32,24 @@ const Header = () => {
             open ? style.headerFixed : ''
           } header-wrap`}
         >
-          <Logo orange>Rossi.</Logo>
+          <Logo orange>{logo}</Logo>
           <Menu open={open} setOpen={setOpen} white />
           <div className={style.button}>
             <Button onClick={toggleModal} white line>
-              Get Started
+              {getStarted}
             </Button>
           </div>
         </Wrapper>
         <Drawer open={open} setOpen={setOpen} />
       </Headroom>
 
-      {openModal && <Contact onClick={toggleModal} />}
+      {openModal && (
+        <Contact
+          title={CTAFormTitle}
+          subtitle={CTAFormSubtitle}
+          onClick={toggleModal}
+        />
+      )}
     </>
   )
 }
