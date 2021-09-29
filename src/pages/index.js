@@ -18,7 +18,7 @@ class PageIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={`Home`}
+          title={`Build Your Brand`}
           keywords={[
             `websites`,
             `branding`,
