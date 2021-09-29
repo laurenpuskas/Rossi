@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import BackgroundImage from 'gatsby-background-image'
 
 import Wrapper from '../Layout/Wrapper'
@@ -26,6 +28,51 @@ const FAQ = () => {
 
   const toggleModal = () => {
     setOpenModal(!openModal)
+  }
+
+  const titleAnimation = useAnimation()
+  const contentAnimation = useAnimation()
+  const { ref, inView } = useInView({ triggerOnce: true })
+
+  useEffect(() => {
+    if (inView) {
+      titleAnimation.start('visible')
+      contentAnimation.start('visible')
+    }
+    if (!inView) {
+      titleAnimation.start('hidden')
+      contentAnimation.start('hidden')
+    }
+  }, [titleAnimation, inView])
+
+  const titleVariant = {
+    hidden: {
+      opacity: 0,
+      rotateY: '10deg',
+      rotateX: '75deg',
+      rotateZ: '-9deg',
+    },
+    visible: {
+      opacity: 1,
+      rotateY: '0deg',
+      rotateX: '0deg',
+      rotateZ: '0deg',
+      transition: {
+        duration: 0.8,
+        delay: 0.5,
+      },
+    },
+  }
+
+  const contentVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.4,
+        delay: 0.6,
+      },
+    },
   }
 
   const data = useStaticQuery(
@@ -66,11 +113,21 @@ const FAQ = () => {
           <Breadcrumb id={`3`} white>
             {FAQLabel}
           </Breadcrumb>
-          <h2
+          <motion.h2
+            ref={ref}
+            initial="hidden"
+            animate={titleAnimation}
+            variants={titleVariant}
             className={style.title}
             dangerouslySetInnerHTML={{ __html: FAQTitle }}
           />
-          <div className={style.grid}>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={contentAnimation}
+            variants={contentVariant}
+            className={style.grid}
+          >
             <div className={style.text}>
               <div dangerouslySetInnerHTML={{ __html: FAQDescription }} />
               <ul className={style.contacts}>
@@ -133,7 +190,7 @@ const FAQ = () => {
                 })}
               </Accordion>
             </div>
-          </div>
+          </motion.div>
         </Wrapper>
         <Footer />
       </BackgroundImage>

@@ -42,24 +42,26 @@ const Services = (props) => {
   }
 
   return (
-    <BackgroundImage
-      id="Services"
-      Tag="div"
-      fluid={isEven(props.id) ? backgroundLight : backgroundDark}
-    >
-      <Wrapper
-        className={`${style.services} ${isEven(props.id) ? '' : style.dark}`}
-        maxWidth={`1600px`}
+    <div>
+      <BackgroundImage
+        id="Services"
+        Tag="div"
+        fluid={isEven(props.id) ? backgroundLight : backgroundDark}
       >
-        <Breadcrumb id={`2`}>{servicesLabel}</Breadcrumb>
-        <Item
-          title={props.title}
-          body={props.body}
-          image={props.image}
-          isEven={isEven(props.id)}
-        />
-      </Wrapper>
-    </BackgroundImage>
+        <Wrapper
+          className={`${style.services} ${isEven(props.id) ? '' : style.dark}`}
+          maxWidth={`1600px`}
+        >
+          <Breadcrumb id={`2`}>{servicesLabel}</Breadcrumb>
+          <Item
+            title={props.title}
+            body={props.body}
+            image={props.image}
+            isEven={isEven(props.id)}
+          />
+        </Wrapper>
+      </BackgroundImage>
+    </div>
   )
 }
 
