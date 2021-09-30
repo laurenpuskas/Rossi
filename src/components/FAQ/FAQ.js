@@ -15,6 +15,7 @@ import faqs from '../../constants/faq'
 import {
   FAQLabel,
   FAQTitle,
+  FAQSubtitle,
   FAQDescription,
   FAQPrompt,
   FAQButton,
@@ -58,8 +59,26 @@ const FAQ = () => {
       rotateX: '0deg',
       rotateZ: '0deg',
       transition: {
-        duration: 0.8,
-        delay: 0.5,
+        duration: 0.6,
+      },
+    },
+  }
+
+  const subtitleVariant = {
+    hidden: {
+      opacity: 0,
+      rotateY: '10deg',
+      rotateX: '75deg',
+      rotateZ: '-9deg',
+    },
+    visible: {
+      opacity: 1,
+      rotateY: '0deg',
+      rotateX: '0deg',
+      rotateZ: '0deg',
+      transition: {
+        duration: 0.6,
+        delay: 0.1,
       },
     },
   }
@@ -70,7 +89,6 @@ const FAQ = () => {
       opacity: 1,
       transition: {
         duration: 1.4,
-        delay: 0.6,
       },
     },
   }
@@ -120,6 +138,14 @@ const FAQ = () => {
             variants={titleVariant}
             className={style.title}
             dangerouslySetInnerHTML={{ __html: FAQTitle }}
+          />
+          <motion.h2
+            ref={ref}
+            initial="hidden"
+            animate={titleAnimation}
+            variants={subtitleVariant}
+            className={style.subtitle}
+            dangerouslySetInnerHTML={{ __html: FAQSubtitle }}
           />
           <motion.div
             ref={ref}

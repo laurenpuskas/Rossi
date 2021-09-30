@@ -55,12 +55,14 @@
   }
 
   h2 {
+    margin: 0;
+  }
+  h2:last-of-type {
     margin-bottom: 40px;
-
-    span {
-      display: block;
-      padding-left: 7%;
-    }
+  }
+  .highlight {
+    display: block;
+    padding-left: 7%;
   }
 }
 
