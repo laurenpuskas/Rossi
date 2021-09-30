@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -15,6 +17,29 @@ const Hero = (props) => {
 
   const toggleModal = () => {
     setOpenModal(!openModal)
+  }
+
+  const fadeAnimation = useAnimation()
+  const { ref, inView } = useInView({ triggerOnce: true })
+
+  useEffect(() => {
+    if (inView) {
+      fadeAnimation.start('visible')
+    }
+    if (!inView) {
+      fadeAnimation.start('hidden')
+    }
+  }, [fadeAnimation, inView])
+
+  const fadeVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 5.3,
+        duration: 1.3,
+      },
+    },
   }
 
   const data = useStaticQuery(
@@ -54,27 +79,34 @@ const Hero = (props) => {
         fluid={sources}
         className={style.hero}
       >
-        <Wrapper className={style.wrapper}>
-          <section>
-            <Wheel
-              color={`#CE7B36`}
-              style={{
-                position: 'absolute',
-                top: '-3.3vw',
-                right: '6.5vw',
-                width: '9.8vw',
-              }}
-            />
-            <div className={style.text}>
-              <h1>{props.title}</h1>
-              <p>{props.subtitle}</p>
-              <Button onClick={toggleModal} arrow white>
-                {props.buttonText}
-              </Button>
-            </div>
-          </section>
-          <Screens />
-        </Wrapper>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={fadeAnimation}
+          variants={fadeVariant}
+        >
+          <Wrapper className={style.wrapper}>
+            <section>
+              <Wheel
+                color={`#CE7B36`}
+                style={{
+                  position: 'absolute',
+                  top: '-3.3vw',
+                  right: '6.5vw',
+                  width: '9.8vw',
+                }}
+              />
+              <div className={style.text}>
+                <h1>{props.title}</h1>
+                <p>{props.subtitle}</p>
+                <Button onClick={toggleModal} arrow white>
+                  {props.buttonText}
+                </Button>
+              </div>
+            </section>
+            <Screens />
+          </Wrapper>
+        </motion.div>
       </BackgroundImage>
 
       {openModal && (
