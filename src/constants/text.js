@@ -2,7 +2,7 @@
 export const getStarted = `Get Started`
 export const logo = `Rossi.`
 export const tel = `(602) 930-7428`
-export const email = `info@madebyrossi.com`
+export const email = `madebyrossi@gmail.com`
 export const CTAFormTitle = `Get Started`
 export const CTAFormSubtitle = `Interested in collaborating? Drop us a line so we can coordinate a phone call to discuss your brand goals.`
 
@@ -16,7 +16,8 @@ export const heroSubtitle = `Whether you're establishing a new business or refre
 
 // About
 export const aboutLabel = `About`
-export const aboutTitle = `Helping creative <span>ideas succeed.</span>`
+export const aboutTitle = `Helping creative`
+export const aboutSubtitle = `brands succeed.`
 export const aboutDescription = `
 <div>
     <p>Rossi was created with the purpose of bringing beautiful, accessible websites to online companies of all sizes. We have worked closely with clients from many backgrounds, including photographers and creatives, boutiques, furniture and clothing retailers, jewelers, writers, and bloggers.</p>
@@ -35,7 +36,8 @@ export const servicesFormSubtitle = `Interested in collaborating? Drop us a line
 
 // FAQ
 export const FAQLabel = `FAQ`
-export const FAQTitle = `Have questions? <span>Reach out 24/7.</span>`
+export const FAQTitle = `Have questions?`
+export const FAQSubtitle = `Reach out 24/7.`
 export const FAQDescription = `<p>Reach out to us through phone call, text or email. All messages will receive a response within 24 hours.</p>`
 export const FAQPrompt = `Have another question?`
 export const FAQButton = `Ask a Question`

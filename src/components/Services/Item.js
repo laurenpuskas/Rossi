@@ -49,8 +49,7 @@ const Item = (props) => {
       rotateX: '0deg',
       rotateZ: '0deg',
       transition: {
-        duration: 0.8,
-        delay: 0.5,
+        duration: 0.6,
       },
     },
   }
@@ -61,7 +60,6 @@ const Item = (props) => {
       opacity: 1,
       transition: {
         duration: 1.4,
-        delay: 0.6,
       },
     },
   }
