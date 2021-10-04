@@ -3,12 +3,12 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 
 import Wrapper from '../Layout/Wrapper'
 import Wheel from './Wheel'
 import Button from '../UI/Button'
 import Contact from '../Contact'
-import Screens from './Screens'
 import { CTAFormTitle, CTAFormSubtitle } from '../../constants/text'
 import * as style from './style.module.scss'
 
@@ -19,25 +19,47 @@ const Hero = (props) => {
     setOpenModal(!openModal)
   }
 
-  const fadeAnimation = useAnimation()
+  const animation = useAnimation()
   const { ref, inView } = useInView({ triggerOnce: true })
 
   useEffect(() => {
     if (inView) {
-      fadeAnimation.start('visible')
+      animation.start('visible')
     }
     if (!inView) {
-      fadeAnimation.start('hidden')
+      animation.start('hidden')
     }
-  }, [fadeAnimation, inView])
+  }, [animation, inView])
 
-  const fadeVariant = {
+  const fade = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         delay: 5.3,
         duration: 1.3,
+      },
+    },
+  }
+
+  const fadeScreenTop = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 5.8,
+        duration: 2,
+      },
+    },
+  }
+
+  const fadeScreenBottom = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 6.1,
+        duration: 2,
       },
     },
   }
@@ -59,6 +81,20 @@ const Hero = (props) => {
             }
           }
         }
+        screen1: file(relativePath: { eq: "hero/screen1.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        screen2: file(relativePath: { eq: "hero/screen2.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     `
   )
@@ -70,6 +106,8 @@ const Hero = (props) => {
       media: `(min-width: 768px)`,
     },
   ]
+  const screen1 = data.screen1.childImageSharp.fluid
+  const screen2 = data.screen2.childImageSharp.fluid
 
   return (
     <>
@@ -82,8 +120,8 @@ const Hero = (props) => {
         <motion.div
           ref={ref}
           initial="hidden"
-          animate={fadeAnimation}
-          variants={fadeVariant}
+          animate={animation}
+          variants={fade}
         >
           <Wrapper className={style.wrapper}>
             <section>
@@ -104,7 +142,28 @@ const Hero = (props) => {
                 </Button>
               </div>
             </section>
-            <Screens />
+
+            <section>
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                className={style.screen}
+                animate={animation}
+                variants={fadeScreenTop}
+              >
+                <Img fluid={screen1} />
+              </motion.div>
+
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                className={style.screen}
+                animate={animation}
+                variants={fadeScreenBottom}
+              >
+                <Img fluid={screen2} />
+              </motion.div>
+            </section>
           </Wrapper>
         </motion.div>
       </BackgroundImage>
