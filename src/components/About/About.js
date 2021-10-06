@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import Img from 'gatsby-image'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 import Wrapper from '../Layout/Wrapper'
 import Breadcrumb from '../UI/Breadcrumb'
@@ -143,14 +144,12 @@ const About = () => {
 
           <div className={style.text}>
             <motion.h2
-              ref={ref}
               initial="hidden"
               animate={animation}
               variants={title}
               dangerouslySetInnerHTML={{ __html: aboutTitle }}
             />
             <motion.h2
-              ref={ref}
               initial="hidden"
               animate={animation}
               variants={subtitle}
@@ -159,7 +158,6 @@ const About = () => {
             />
 
             <motion.div
-              ref={ref}
               initial="hidden"
               animate={animation}
               variants={content}

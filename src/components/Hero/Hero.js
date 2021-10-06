@@ -145,7 +145,6 @@ const Hero = (props) => {
 
             <section>
               <motion.div
-                ref={ref}
                 initial="hidden"
                 className={style.screen}
                 animate={animation}
@@ -155,7 +154,6 @@ const Hero = (props) => {
               </motion.div>
 
               <motion.div
-                ref={ref}
                 initial="hidden"
                 className={style.screen}
                 animate={animation}

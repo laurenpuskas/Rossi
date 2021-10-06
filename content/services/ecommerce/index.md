@@ -1,7 +1,9 @@
 ---
 title: Ecommerce
+subtitle: Starting at $2000.
 id: '4'
-image: './image.png'
+base: './base.png'
+image: './image.jpg'
 date: '09/09/2021'
 ---
 

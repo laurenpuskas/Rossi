@@ -55,7 +55,9 @@ const Services = (props) => {
           <Breadcrumb id={`2`}>{servicesLabel}</Breadcrumb>
           <Item
             title={props.title}
+            subtitle={props.subtitle}
             body={props.body}
+            base={props.base}
             image={props.image}
             isEven={isEven(props.id)}
           />
