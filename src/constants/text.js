@@ -22,11 +22,13 @@ export const aboutDescription = `
 <div>
     <p>Rossi was created with the purpose of bringing beautiful, accessible websites to online companies of all sizes. We have worked closely with clients from many backgrounds, including photographers and creatives, boutiques, furniture and clothing retailers, jewelers, writers, and bloggers.</p>
     <p>We don't rely on premade templates and themes. All work we produce is 100% bespoke and hand-made for your unique business needs. Popular platforms we work with include Shopify, Squarespace, WordPress, and BigCommerce.</p>
+    <p>We also excel at creating tailored web systems and admin panels for you, your </p>
 </div>
 <div>
-    <p>We also excel at creating tailored web systems and admin panels for you, your customers, and sales staff.</p>
+    <p>customers, and sales staff with lightning-fast web solutions built with ReactJS.</p>
     <p>Our design expertise is in sleek, minimal designs with a stress on mobile optimization and user engagement.</p>
     <p>From the start of our collaboration to launch, Rossi strives to offer our clients a seamless experience in bringing their creative ideas to life.</p>
+    <p>Rossi was founded by Lauren Puskas, a web developer based in Austin, Texas.</p>
 </div>`
 
 // Services

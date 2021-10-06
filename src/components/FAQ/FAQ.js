@@ -140,7 +140,6 @@ const FAQ = () => {
             dangerouslySetInnerHTML={{ __html: FAQTitle }}
           />
           <motion.h2
-            ref={ref}
             initial="hidden"
             animate={titleAnimation}
             variants={subtitleVariant}
@@ -148,7 +147,6 @@ const FAQ = () => {
             dangerouslySetInnerHTML={{ __html: FAQSubtitle }}
           />
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={contentAnimation}
             variants={contentVariant}

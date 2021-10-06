@@ -23,16 +23,22 @@ const Item = (props) => {
 
   const titleAnimation = useAnimation()
   const contentAnimation = useAnimation()
+  const imageAnimation = useAnimation()
+  const baseAnimation = useAnimation()
   const { ref, inView } = useInView({ triggerOnce: true })
 
   useEffect(() => {
     if (inView) {
       titleAnimation.start('visible')
       contentAnimation.start('visible')
+      imageAnimation.start('visible')
+      baseAnimation.start('visible')
     }
     if (!inView) {
       titleAnimation.start('hidden')
       contentAnimation.start('hidden')
+      imageAnimation.start('hidden')
+      baseAnimation.start('hidden')
     }
   }, [titleAnimation, inView])
 
@@ -64,6 +70,27 @@ const Item = (props) => {
     },
   }
 
+  const imageVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.4,
+      },
+    },
+  }
+
+  const baseVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.4,
+        delay: 0.8,
+      },
+    },
+  }
+
   return (
     <>
       <article className={style.wrapper}>
@@ -77,8 +104,15 @@ const Item = (props) => {
           >
             {props.title}
           </motion.h2>
+          <motion.p
+            initial="hidden"
+            animate={titleAnimation}
+            variants={titleVariant}
+            className={style.subtitle}
+          >
+            {props.subtitle}
+          </motion.p>
           <motion.div
-            ref={ref}
             initial="hidden"
             animate={contentAnimation}
             variants={contentVariant}
@@ -94,10 +128,32 @@ const Item = (props) => {
           </motion.div>
         </div>
         <div className={style.image}>
-          <Carousel isEven={props.isEven}>
-            <Img fluid={props.image} />
-            <Img fluid={props.image} />
-          </Carousel>
+          {props.type === 'carousel' ? (
+            <Carousel isEven={props.isEven}>
+              <Img fluid={props.image} />
+              <Img fluid={props.image} />
+            </Carousel>
+          ) : (
+            <div className={style.imageWrap}>
+              <div className={props.isEven ? style.mainImgEven : style.mainImg}>
+                <motion.div
+                  className={style.inner}
+                  initial="hidden"
+                  animate={imageAnimation}
+                  variants={imageVariant}
+                >
+                  <Img fluid={props.image} />
+                </motion.div>
+              </div>
+              <motion.div
+                initial="hidden"
+                animate={baseAnimation}
+                variants={baseVariant}
+              >
+                <Img fluid={props.base} className={style.baseImg} />
+              </motion.div>
+            </div>
+          )}
         </div>
       </article>
 

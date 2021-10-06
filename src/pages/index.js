@@ -41,7 +41,9 @@ class PageIndex extends React.Component {
               excerpt={service.excerpt}
               id={service.frontmatter.id}
               title={service.frontmatter.title}
+              subtitle={service.frontmatter.subtitle}
               body={service.body}
+              base={service.frontmatter.base.childImageSharp.fluid}
               image={service.frontmatter.image.childImageSharp.fluid}
             />
           )
@@ -69,11 +71,19 @@ export const pageQuery = graphql`
         }
         frontmatter {
           title
+          subtitle
           id
+          base {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           image {
             childImageSharp {
               fluid(maxWidth: 1200, quality: 100) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
