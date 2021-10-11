@@ -1,6 +1,6 @@
 ---
 title: Ecommerce
-subtitle: Starting at $2000.
+subtitle: Starting at $1500.
 id: '4'
 base: './base.png'
 image: './image.jpg'
