@@ -47,10 +47,6 @@ class PageIndex extends React.Component {
               image1={service.frontmatter.image1.childImageSharp.fluid}
               image2={service.frontmatter.image2.childImageSharp.fluid}
               image3={service.frontmatter.image3.childImageSharp.fluid}
-              image4={service.frontmatter.image4.childImageSharp.fluid}
-              image5={service.frontmatter.image5.childImageSharp.fluid}
-              image6={service.frontmatter.image6.childImageSharp.fluid}
-              image7={service.frontmatter.image7.childImageSharp.fluid}
             />
           ) : (
             <Services
@@ -113,34 +109,6 @@ export const pageQuery = graphql`
             }
           }
           image3 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image4 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image5 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image6 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image7 {
             childImageSharp {
               fluid(maxWidth: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
