@@ -7,6 +7,10 @@ import Img from 'gatsby-image'
 import Carousel from '../UI/Carousel'
 import Button from '../UI/Button'
 import Contact from '../Contact'
+import Design from './Design'
+import Landing from './Items/Landing'
+import Websites from './Items/Websites'
+import Ecommerce from './Items/Ecommerce'
 import {
   getStarted,
   servicesFormTitle,
@@ -86,7 +90,7 @@ const Item = (props) => {
       opacity: 1,
       transition: {
         duration: 1.4,
-        delay: 0.8,
+        delay: 0.5,
       },
     },
   }
@@ -127,6 +131,7 @@ const Item = (props) => {
             </Button>
           </motion.div>
         </div>
+
         <div className={style.image}>
           {props.type === 'carousel' ? (
             <Carousel isEven={props.isEven}>
@@ -136,14 +141,34 @@ const Item = (props) => {
           ) : (
             <div className={style.imageWrap}>
               <div className={props.isEven ? style.mainImgEven : style.mainImg}>
-                <motion.div
-                  className={style.inner}
-                  initial="hidden"
-                  animate={imageAnimation}
-                  variants={imageVariant}
-                >
-                  <Img fluid={props.image} />
-                </motion.div>
+                {props.title === 'Design' ? (
+                  <Design
+                    logo={`Anna Rodriguez`}
+                    menu={['Blog', 'About', 'Contact']}
+                    image1={props.image1}
+                    image2={props.image2}
+                    image3={props.image3}
+                    image4={props.image4}
+                    image5={props.image5}
+                    image6={props.image6}
+                    image7={props.image7}
+                  />
+                ) : props.title === 'Landing' ? (
+                  <Landing />
+                ) : props.title === 'Websites' ? (
+                  <Websites />
+                ) : props.title === 'Ecommerce' ? (
+                  <Ecommerce />
+                ) : (
+                  <motion.div
+                    className={style.inner}
+                    initial="hidden"
+                    animate={imageAnimation}
+                    variants={imageVariant}
+                  >
+                    <Img fluid={props.image} />
+                  </motion.div>
+                )}
               </div>
               <motion.div
                 initial="hidden"
