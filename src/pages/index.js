@@ -62,6 +62,7 @@ class PageIndex extends React.Component {
               subtitle={service.frontmatter.subtitle}
               body={service.body}
               base={service.frontmatter.base.childImageSharp.fluid}
+              image1={service.frontmatter.image1.childImageSharp.fluid}
             />
           )
         })}

@@ -153,12 +153,6 @@ const Item = (props) => {
                     image6={props.image6}
                     image7={props.image7}
                   />
-                ) : props.title === 'Landing' ? (
-                  <Landing />
-                ) : props.title === 'Websites' ? (
-                  <Websites />
-                ) : props.title === 'Ecommerce' ? (
-                  <Ecommerce />
                 ) : (
                   <motion.div
                     className={style.inner}
@@ -166,7 +160,7 @@ const Item = (props) => {
                     animate={imageAnimation}
                     variants={imageVariant}
                   >
-                    <Img fluid={props.image} />
+                    <Img fluid={props.image1} />
                   </motion.div>
                 )}
               </div>
