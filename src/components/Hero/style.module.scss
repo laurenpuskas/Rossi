@@ -85,7 +85,7 @@
   background-position: center;
 
   @media screen and (max-width: $medium) {
-    height: 500px;
+    height: 450px;
   }
 }
 
@@ -98,7 +98,9 @@
   overflow-y: hidden;
 
   @media screen and (max-width: $medium) {
-    height: 400px;
+    height: 380px;
+    top: auto;
+    bottom: 0;
   }
 }
 
@@ -135,10 +137,10 @@
     transform: translateY(-45%);
   }
   70% {
-    transform: translateY(-73%);
+    transform: translateY(-72.5%);
   }
   80% {
-    transform: translateY(-73%);
+    transform: translateY(-72.5%);
   }
   90% {
     transform: translateY(0);

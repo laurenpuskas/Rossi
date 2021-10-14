@@ -27,7 +27,8 @@
       cursor: pointer;
 
       @media screen and (min-width: $xlarge) {
-        font-size: 1.05vw;
+        font-size: 0.89vw;
+        letter-spacing: 0.09vw;
       }
 
       &:before,

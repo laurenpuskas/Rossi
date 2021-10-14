@@ -34,7 +34,7 @@ class PageIndex extends React.Component {
         />
         <About />
         {services.map((service) => {
-          return (
+          return service.frontmatter.title === 'Design' ? (
             <Services
               key={service.frontmatter.id}
               slug={service.fields.slug}
@@ -44,7 +44,24 @@ class PageIndex extends React.Component {
               subtitle={service.frontmatter.subtitle}
               body={service.body}
               base={service.frontmatter.base.childImageSharp.fluid}
-              image={service.frontmatter.image.childImageSharp.fluid}
+              image1={service.frontmatter.image1.childImageSharp.fluid}
+              image2={service.frontmatter.image2.childImageSharp.fluid}
+              image3={service.frontmatter.image3.childImageSharp.fluid}
+              image4={service.frontmatter.image4.childImageSharp.fluid}
+              image5={service.frontmatter.image5.childImageSharp.fluid}
+              image6={service.frontmatter.image6.childImageSharp.fluid}
+              image7={service.frontmatter.image7.childImageSharp.fluid}
+            />
+          ) : (
+            <Services
+              key={service.frontmatter.id}
+              slug={service.fields.slug}
+              excerpt={service.excerpt}
+              id={service.frontmatter.id}
+              title={service.frontmatter.title}
+              subtitle={service.frontmatter.subtitle}
+              body={service.body}
+              base={service.frontmatter.base.childImageSharp.fluid}
             />
           )
         })}
@@ -80,9 +97,51 @@ export const pageQuery = graphql`
               }
             }
           }
-          image {
+          image1 {
             childImageSharp {
-              fluid(maxWidth: 1200, quality: 100) {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image2 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image3 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image4 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image5 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image6 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          image7 {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
