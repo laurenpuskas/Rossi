@@ -85,7 +85,7 @@
   background-position: center;
 
   @media screen and (max-width: $medium) {
-    height: 450px;
+    height: 380px;
   }
 }
 
@@ -98,8 +98,10 @@
   overflow-y: hidden;
 
   @media screen and (max-width: $medium) {
-    height: 380px;
+    width: 60%;
+    height: 320px;
     top: auto;
+    left: 20%;
     bottom: 0;
   }
 }
