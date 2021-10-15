@@ -7,17 +7,29 @@
   top: 0;
   left: 0;
   padding: 20px 30px;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation-duration: 10s;
-  animation-name: designChange;
+  background-color: #f6eeea;
 
-  * {
-    font-family: 'Quicksand', serif !important;
+  @media screen and (max-width: $xlarge) {
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     animation-duration: 10s;
-    animation-name: typographyChange;
+    animation-name: designChange;
+    padding: 20px 15px;
+  }
+
+  * {
+    font-family: 'Montserrat', sans-serif !important;
+
+    @media screen and (max-width: $xlarge) {
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation-duration: 10s;
+      animation-name: typographyChange;
+    }
+
+    @media screen and (min-width: $xlarge) {
+      color: #464744 !important;
+    }
   }
 
   *:hover {
@@ -52,7 +64,7 @@
   justify-content: space-evenly;
   align-items: center;
 
-  @media screen and (max-width: $medium) {
+  @media screen and (max-width: $xlarge) {
     display: none;
   }
 
@@ -73,17 +85,24 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  @media screen and (max-width: $medium) {
+  @media screen and (max-width: $xlarge) {
     display: flex;
   }
 
   span {
     width: 100%;
     height: 2px;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    animation-duration: 10s;
-    animation-name: menuChange;
+
+    @media screen and (min-width: $xlarge) {
+      background-color: #464744;
+    }
+
+    @media screen and (max-width: $xlarge) {
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation-duration: 10s;
+      animation-name: menuChange;
+    }
   }
 }
 
@@ -92,21 +111,84 @@
   position: relative;
 
   .post {
-    width: 100%;
-    margin-bottom: 10px;
     text-align: center;
 
-    h4 {
-      font-family: $sans;
-      font-size: 16px;
-      font-weight: 800;
-      margin: 15px 0 8px !important;
-      padding: 0 10px;
+    @media screen and (max-width: $xlarge) {
+      width: 100%;
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 11px;
-      padding: 0 10px;
+    @media screen and (min-width: $xlarge) {
+      margin-bottom: 10px;
+      position: absolute;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation-duration: 8s;
+    }
+
+    .date,
+    .button {
+      font-weight: 600;
+      font-size: 9px;
+      margin: 10px 0 5px;
+
+      @media screen and (min-width: $xlarge) {
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-duration: 8s;
+        animation-name: dateChange;
+      }
+    }
+
+    .date {
+      opacity: 0.8;
+    }
+
+    .button {
+      text-decoration: underline;
+    }
+
+    h4 {
+      margin: 0 !important;
+      font-size: 14px;
+      font-weight: 600;
+
+      @media screen and (min-width: $xlarge) {
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-duration: 8s;
+        animation-name: h4Change;
+      }
+    }
+  }
+
+  .post1 {
+    top: 0;
+    left: 0;
+
+    @media screen and (min-width: $xlarge) {
+      animation-name: post1Change;
+    }
+  }
+  .post2 {
+    right: 0;
+
+    @media screen and (min-width: $xlarge) {
+      animation-name: post2Change;
+    }
+  }
+  .post3 {
+    left: 0;
+
+    @media screen and (min-width: $xlarge) {
+      animation-name: post3Change;
+    }
+  }
+  .post4 {
+    right: 0;
+
+    @media screen and (min-width: $xlarge) {
+      animation-name: post4Change;
     }
   }
 }
@@ -119,10 +201,10 @@
     background-color: #f6eeea;
   }
   50% {
-    background-color: #2f2f2f;
+    background-color: #d7c2b5;
   }
   90% {
-    background-color: #2f2f2f;
+    background-color: #d7c2b5;
   }
   100% {
     background-color: #f6eeea;
@@ -137,10 +219,10 @@
     color: #464744;
   }
   50% {
-    color: #fff;
+    color: #534035;
   }
   90% {
-    color: #fff;
+    color: #534035;
   }
   100% {
     color: #464744;
@@ -155,12 +237,140 @@
     background-color: #464744;
   }
   50% {
-    background-color: #fff;
+    background-color: #534035;
   }
   90% {
-    background-color: #fff;
+    background-color: #534035;
   }
   100% {
     background-color: #464744;
+  }
+}
+
+@keyframes dateChange {
+  0% {
+    font-size: 11px;
+    margin: 10px 0 6px;
+  }
+  40% {
+    font-size: 11px;
+    margin: 10px 0 6px;
+  }
+  50% {
+    font-size: 9px;
+    margin: 10px 0 5px;
+  }
+  90% {
+    font-size: 9px;
+    margin: 10px 0 5px;
+  }
+  100% {
+    font-size: 11px;
+    margin: 10px 0 6px;
+  }
+}
+
+@keyframes h4Change {
+  0% {
+    font-size: 18px;
+  }
+  40% {
+    font-size: 18px;
+  }
+  50% {
+    font-size: 14px;
+  }
+  90% {
+    font-size: 14px;
+  }
+  100% {
+    font-size: 18px;
+  }
+}
+
+@keyframes post1Change {
+  0% {
+    width: 100%;
+  }
+  40% {
+    width: 100%;
+  }
+  50% {
+    width: 48%;
+  }
+  90% {
+    width: 48%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes post2Change {
+  0% {
+    width: 100%;
+    top: 400px;
+  }
+  40% {
+    width: 100%;
+    top: 400px;
+  }
+  50% {
+    width: 48%;
+    top: 0;
+  }
+  90% {
+    width: 48%;
+    top: 0;
+  }
+  100% {
+    width: 100%;
+    top: 400px;
+  }
+}
+
+@keyframes post3Change {
+  0% {
+    width: 100%;
+    top: 800px;
+  }
+  40% {
+    width: 100%;
+    top: 800px;
+  }
+  50% {
+    width: 48%;
+    top: 240px;
+  }
+  90% {
+    width: 48%;
+    top: 240px;
+  }
+  100% {
+    width: 100%;
+    top: 800px;
+  }
+}
+
+@keyframes post4Change {
+  0% {
+    width: 100%;
+    top: 1200px;
+  }
+  40% {
+    width: 100%;
+    top: 1200px;
+  }
+  50% {
+    width: 48%;
+    top: 260px;
+  }
+  90% {
+    width: 48%;
+    top: 260px;
+  }
+  100% {
+    width: 100%;
+    top: 1200px;
   }
 }
