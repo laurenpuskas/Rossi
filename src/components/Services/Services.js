@@ -62,6 +62,7 @@ const Services = (props) => {
             image2={props.image2}
             image3={props.image3}
             image4={props.image4}
+            image5={props.image5}
             isEven={isEven(props.id)}
           />
         </Wrapper>
