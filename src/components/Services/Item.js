@@ -148,6 +148,7 @@ const Item = (props) => {
                     image1={props.image1}
                     image2={props.image2}
                     image3={props.image3}
+                    image4={props.image4}
                   />
                 ) : (
                   <motion.div
