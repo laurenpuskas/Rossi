@@ -152,11 +152,16 @@ const Item = (props) => {
                   <Websites
                     logo={`Everlane Architects`}
                     text={`Everlane Architects is an award winning group of residential architects in the Bay Area.`}
+                    projectTitle={`Brooklyn Brownstone Townhouse`}
                     image1={props.image1}
                     image2={props.image2}
                     image3={props.image3}
                     image4={props.image4}
                     image5={props.image5}
+                    postImage1={props.postImage1}
+                    postImage2={props.postImage2}
+                    postImage3={props.postImage3}
+                    postImage4={props.postImage4}
                   />
                 ) : (
                   <motion.div

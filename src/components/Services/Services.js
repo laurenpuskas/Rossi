@@ -63,6 +63,10 @@ const Services = (props) => {
             image3={props.image3}
             image4={props.image4}
             image5={props.image5}
+            postImage1={props.postImage1}
+            postImage2={props.postImage2}
+            postImage3={props.postImage3}
+            postImage4={props.postImage4}
             isEven={isEven(props.id)}
           />
         </Wrapper>
