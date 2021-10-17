@@ -18,10 +18,15 @@ const Block = (props) => {
 
   return (
     <div className={`${className} ${style.post}`}>
-      <Img fluid={props.image} alt={props.title} />
-      <p className={style.date}>{props.date}</p>
-      <h4>{props.title}</h4>
-      <p className={style.button}>Read More</p>
+      <section>
+        <Img fluid={props.image} alt={props.title} />
+      </section>
+
+      <section>
+        <p className={style.date}>{props.date}</p>
+        <h4>{props.title}</h4>
+        <p className={style.button}>Read More</p>
+      </section>
     </div>
   )
 }
