@@ -34,7 +34,7 @@ class PageIndex extends React.Component {
         />
         <About />
         {services.map((service) => {
-          return service.frontmatter.title === 'Design' ? (
+          return (
             <Services
               key={service.frontmatter.id}
               slug={service.fields.slug}
@@ -44,42 +44,9 @@ class PageIndex extends React.Component {
               subtitle={service.frontmatter.subtitle}
               body={service.body}
               base={service.frontmatter.base.childImageSharp.fluid}
-              image1={service.frontmatter.image1.childImageSharp.fluid}
-              image2={service.frontmatter.image2.childImageSharp.fluid}
-              image3={service.frontmatter.image3.childImageSharp.fluid}
-              image4={service.frontmatter.image4.childImageSharp.fluid}
-            />
-          ) : service.frontmatter.title === 'Websites' ? (
-            <Services
-              key={service.frontmatter.id}
-              slug={service.fields.slug}
-              excerpt={service.excerpt}
-              id={service.frontmatter.id}
-              title={service.frontmatter.title}
-              subtitle={service.frontmatter.subtitle}
-              body={service.body}
-              base={service.frontmatter.base.childImageSharp.fluid}
-              image1={service.frontmatter.image1.childImageSharp.fluid}
-              image2={service.frontmatter.image2.childImageSharp.fluid}
-              image3={service.frontmatter.image3.childImageSharp.fluid}
-              image4={service.frontmatter.image4.childImageSharp.fluid}
-              image5={service.frontmatter.image5.childImageSharp.fluid}
-              postImage1={service.frontmatter.postImage1.childImageSharp.fluid}
-              postImage2={service.frontmatter.postImage2.childImageSharp.fluid}
-              postImage3={service.frontmatter.postImage3.childImageSharp.fluid}
-              postImage4={service.frontmatter.postImage4.childImageSharp.fluid}
-            />
-          ) : (
-            <Services
-              key={service.frontmatter.id}
-              slug={service.fields.slug}
-              excerpt={service.excerpt}
-              id={service.frontmatter.id}
-              title={service.frontmatter.title}
-              subtitle={service.frontmatter.subtitle}
-              body={service.body}
-              base={service.frontmatter.base.childImageSharp.fluid}
-              image1={service.frontmatter.image1.childImageSharp.fluid}
+              layer1={service.frontmatter.layer1.childImageSharp.fluid}
+              layer2={service.frontmatter.layer2.childImageSharp.fluid}
+              layer3={service.frontmatter.layer3.childImageSharp.fluid}
             />
           )
         })}
@@ -115,65 +82,23 @@ export const pageQuery = graphql`
               }
             }
           }
-          image1 {
+          layer1 {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
+              fluid(maxWidth: 890, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          image2 {
+          layer2 {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
+              fluid(maxWidth: 890, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
-          image3 {
+          layer3 {
             childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image4 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          image5 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          postImage1 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          postImage2 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          postImage3 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          postImage4 {
-            childImageSharp {
-              fluid(maxWidth: 800, quality: 100) {
+              fluid(maxWidth: 890, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

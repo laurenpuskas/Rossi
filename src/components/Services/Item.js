@@ -7,8 +7,6 @@ import Img from 'gatsby-image'
 import Carousel from '../UI/Carousel'
 import Button from '../UI/Button'
 import Contact from '../Contact'
-import Design from './Design'
-import Websites from './Websites'
 import {
   getStarted,
   servicesFormTitle,
@@ -138,41 +136,35 @@ const Item = (props) => {
             </Carousel>
           ) : (
             <div className={style.imageWrap}>
-              <div className={props.isEven ? style.mainImgEven : style.mainImg}>
-                {props.title === 'Design' ? (
-                  <Design
-                    logo={`Anna Rodriguez`}
-                    menu={['Blog', 'About', 'Contact']}
-                    image1={props.image1}
-                    image2={props.image2}
-                    image3={props.image3}
-                    image4={props.image4}
-                  />
-                ) : props.title === 'Websites' ? (
-                  <Websites
-                    logo={`Everlane Architects`}
-                    text={`Everlane Architects is an award winning group of residential architects in the Bay Area.`}
-                    projectTitle={`Brooklyn Brownstone Townhouse`}
-                    image1={props.image1}
-                    image2={props.image2}
-                    image3={props.image3}
-                    image4={props.image4}
-                    image5={props.image5}
-                    postImage1={props.postImage1}
-                    postImage2={props.postImage2}
-                    postImage3={props.postImage3}
-                    postImage4={props.postImage4}
-                  />
-                ) : (
-                  <motion.div
-                    className={style.inner}
-                    initial="hidden"
-                    animate={imageAnimation}
-                    variants={imageVariant}
-                  >
-                    <Img fluid={props.image1} />
-                  </motion.div>
-                )}
+              <div
+                className={`${
+                  props.isEven ? style.mainImgEven : style.mainImg
+                } ${
+                  props.title === 'Design'
+                    ? style.design
+                    : props.title === 'Landing'
+                    ? style.landing
+                    : props.title === 'Websites'
+                    ? style.websites
+                    : style.ecommerce
+                }`}
+              >
+                <motion.div
+                  className={style.inner}
+                  initial="hidden"
+                  animate={imageAnimation}
+                  variants={imageVariant}
+                >
+                  <div className={style.layer}>
+                    <Img fluid={props.layer1} />
+                  </div>
+                  {/* <div className={style.layer}>
+                    <Img fluid={props.layer2} />
+                  </div>
+                  <div className={style.layer}>
+                    <Img fluid={props.layer3} />
+                  </div> */}
+                </motion.div>
               </div>
               <motion.div
                 initial="hidden"
