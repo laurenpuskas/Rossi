@@ -58,15 +58,9 @@ const Services = (props) => {
             subtitle={props.subtitle}
             body={props.body}
             base={props.base}
-            image1={props.image1}
-            image2={props.image2}
-            image3={props.image3}
-            image4={props.image4}
-            image5={props.image5}
-            postImage1={props.postImage1}
-            postImage2={props.postImage2}
-            postImage3={props.postImage3}
-            postImage4={props.postImage4}
+            layer1={props.layer1}
+            layer2={props.layer2}
+            layer3={props.layer3}
             isEven={isEven(props.id)}
           />
         </Wrapper>
